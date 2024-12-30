@@ -1,4 +1,4 @@
-import ReviewCard from "./review-card";
+// import ReviewCard from "./review-card";
 
 export function Testimonials() {
   return (
