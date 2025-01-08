@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { MenuIcon, ShoppingCartIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
+import { ShoppingCartPopover } from "./shopping-cart";
 
 export function Header() {
   return (
@@ -14,7 +15,7 @@ export function Header() {
           Betterment
         </p>
         <div className="flex justify-center items-center gap-2">
-          <ShoppingCartIcon className="size-5 stroke-white" />
+          <ShoppingCartPopover />
           <Button size="icon" variant="ghost" className="hover:bg-transparent">
             <MenuIcon className="size-5 stroke-white" />
           </Button>

@@ -1,4 +1,4 @@
-import { Star, Check } from "lucide-react";
+import { Star, ShieldCheck } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface ReviewCardProps {
@@ -17,9 +17,9 @@ export default function ReviewCard({
   rating = 5,
 }: ReviewCardProps) {
   return (
-    <Card className="w-full max-w-xs shadow-sm">
+    <Card className="w-full max-w-xs shadow-xl border-0">
       <CardContent className="p-4 space-y-2">
-        <div className="flex gap-1 justify-center relative -top-8 bg-white rounded-full">
+        <div className="flex gap-1 justify-center relative -top-6 bg-white rounded-full shadow-md py-2 w-[150px] mx-auto">
           {[...Array(rating)].map((_, i) => (
             <Star
               key={i}
@@ -28,14 +28,18 @@ export default function ReviewCard({
           ))}
         </div>
 
-        <div className="flex items-center gap-1">
-          <span className="font-medium">{name}</span>
-          {isVerified && <Check className="w-4 h-4 text-emerald-500" />}
+        <div className="flex items-center gap-1 justify-center">
+          <span className="font-semibold">{name}</span>
+          {isVerified && (
+            <ShieldCheck className="w-4 h-4 fill-emerald-500 stroke-white" />
+          )}
         </div>
 
         <p className="text-sm text-muted-foreground">{review}</p>
 
-        <time className="block text-sm text-muted-foreground">{date}</time>
+        <time className="block text-sm text-muted-foreground text-right">
+          {date}
+        </time>
       </CardContent>
     </Card>
   );

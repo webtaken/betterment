@@ -25,6 +25,7 @@ import {
 } from "./ui/accordion";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { fetchGorritoInformation } from "@/lib/actions/shopify";
 
 function ManWithGorrito() {
   return (
@@ -176,185 +177,386 @@ function WomanWithGorrito() {
   );
 }
 
-function GorritoPrice() {
+async function GorritoPrice() {
+  const { data } = await fetchGorritoInformation();
+  if (!data) return null;
+  const product = data.product;
+  console.log(JSON.stringify(product, null, 2));
+  console.log(product.variants);
   return (
-    <section className="bg-low-primary grid grid-cols-1 sm:grid-cols-2 place-items-stretch gap-6 py-24 px-32">
-      <div className="grid grid-cols-6 place-items-stretch gap-4">
-        <div className="col-span-2 flex flex-col gap-4 w-full">
-          <Image
-            src="/girl_gorrito_special.png"
-            alt="Girl with gorrito betterment"
-            className="rounded-xl w-full h-[30%]"
-            width={100}
-            height={100}
-          />
-          <Image
-            src="/girl_gorrito2.png"
-            alt="Girl with gorrito betterment 2"
-            className="rounded-xl w-full h-[30%]"
-            width={100}
-            height={100}
-          />
-          <Image
-            src="/girl_gorrito.png"
-            alt="Girl with gorrito betterment"
-            className="rounded-xl w-full h-[30%]"
-            width={100}
-            height={100}
-          />
-        </div>
-        <div className="col-span-4">
-          <Image
-            src="/man_gorrito.png"
-            alt="Man with gorrito betterment 2"
-            className="rounded-xl w-full h-[80%]"
-            width={100}
-            height={100}
-          />
-        </div>
-      </div>
-      <div className="flex flex-col w-full">
-        <Card className="w-[400px]">
-          <CardHeader>
-            <CardTitle className="text-3xl text-primary pt-1.5 font-bold">
-              Gorrito Anti-Migrañas
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-primary">
-            <div className="flex flex-col gap-2 text-sm">
-              <div className="flex items-center gap-x-2">
-                <CheckCircle2 className="size-5 fill-primary stroke-white" />
-                <p>Alivia dolores de cabeza y migrañas</p>
-              </div>
-              <div className="flex items-center gap-x-2">
-                <CheckCircle2 className="size-5 fill-primary stroke-white" />
-                <p>Reduce estrés y tensión muscular</p>
-              </div>
-              <div className="flex items-center gap-x-2">
-                <CheckCircle2 className="size-5 fill-primary stroke-white" />
-                <p>Ayuda a conciliar el sueño</p>
-              </div>
+    <section className="bg-low-primary min-h-screen py-12 px-4 md:px-8 lg:px-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex gap-4 h-[500px]">
+          <div className="flex flex-col gap-4 w-24">
+            <div className="h-[32%] relative rounded-lg overflow-hidden">
+              <Image
+                src="/girl_gorrito_special.png"
+                alt="Girl with gorrito betterment"
+                className="object-cover"
+                fill
+                sizes="(max-width: 96px) 100vw, 96px"
+              />
             </div>
-          </CardContent>
-          <CardFooter className="flex justify-between">
-            <div className="flex items-center gap-x-4 text-primary text-lg">
-              <p className="line-through">S/. 99.90</p>
-              <p className="font-bold">S/. 79.90</p>
+            <div className="h-[32%] relative rounded-lg overflow-hidden">
+              <Image
+                src="/girl_gorrito2.png"
+                alt="Girl with gorrito betterment 2"
+                className="object-cover"
+                fill
+                sizes="(max-width: 96px) 100vw, 96px"
+              />
             </div>
-            <Button
-              variant="secondary"
-              className="text-center text-white text-lg font-semibold rounded-full w-36"
-            >
-              Comprar
-            </Button>
-          </CardFooter>
-        </Card>
-        <Accordion
-          type="single"
-          collapsible
-          className="w-[350px] px-8 text-white"
-        >
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Descripción</AccordionTrigger>
-            <AccordionContent className="text-xs">
-              Migrañas? Dolores de cabeza? Tensión? El Gorrito Antimigrañas está
-              diseñado para liberarte de estos males y brindarte el alivio que
-              necesitas. Usándolo frío, es altamente efectivo para aliviar
-              migrañas y dolores de cabeza, además de ayudarte a relajarte
-              profundamente. Su diseño ergonómico se ajusta cómodamente a tu
-              cabeza, ofreciendo una cobertura 360° que abarca hasta los ojos.
-              Bloquea por completo la luz y aplica una presión ligera, ideal
-              para aliviar tensiones. Y sí… ¡puedes usarlo como antifaz para
-              dormir con más frescura y comodidad!
-              <br /> Si prefieres, también puedes usarlo como una compresa.
-              Caliente, es ideal para aliviar cólicos menstruales, dolores
-              estomacales, molestias en la espalda o el cuello. También mejora
-              el flujo sanguíneo, reduce la rigidez articular y calma los
-              espasmos musculares, proporcionando un alivio cálido y
-              reconfortante. Fría, reduce la inflamación y alivia el dolor en
-              casos de golpes o lesiones, acelerando la recuperación muscular.
-              <br />
-              Incluye una bolsa hermética protectora e instrucciones de uso.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>Materiales</AccordionTrigger>
-            <AccordionContent>
-              <ul>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-10" />
-                  Gel de glicerina con grado médico, apto para terapias de frío
-                  y calor.
-                </li>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-10" />
-                  Funda de licra y nylon, suave, cómoda y protectora para la
-                  piel.
-                </li>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-10" />
-                  Composición elástica y suave en todo momento (no se pondrá
-                  rígido)
-                </li>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-6" />
-                  No condensa (no te mojará)
-                </li>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-10" />
-                  No tóxico y sin olor (seguro y sencillo de usar)
-                </li>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-10" />
-                  Mantiene el frío hasta por 30 minutos (¡máxima relajación!)
-                </li>
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Instrucciones de uso</AccordionTrigger>
-            <AccordionContent>
-              <ul>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-10" />
-                  Para enfriar, coloca el gorrito dentro de la bolsa hermética
-                  cerrada y déjalo en el congelador por al menos 1-2 horas.
-                  <br /> Si lo deseas, puedes dejarlo ahí permanentemente.
-                </li>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-10" />
-                  Para calentar, retira el gorrito de la bolsa hermética y
-                  colócalo en un plato. <br />
-                  Calienta en el microondas en intervalos de 1 minuto hasta
-                  alcanzar la temperatura deseada.
-                </li>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-10" />
-                  Para limpiar, nunca sumerjas el gorrito en agua. Usa un paño
-                  húmedo o una toalla para limpiarlo.
-                </li>
-                <li className="flex items-start gap-x-2">
-                  <Dot className="size-10" />
-                  Si el gorrito se corta y el gel queda expuesto, deja de usarlo
-                  y contáctanos para asistencia.
-                </li>
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-4">
-            <AccordionTrigger>Envío y entrega</AccordionTrigger>
-            <AccordionContent>
-              Todos los envíos se realizan al día siguiente o hasta 48 horas
-              después. Si es a provincia, se dejará en engancha en este rango.
-              Nosotros te contactaremos minutos después de tu compra para
-              coordinar contigo el envío, queremos asegurarnos de que tu paquete
-              llegue sano y salvo!
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+            <div className="h-[32%] relative rounded-lg overflow-hidden">
+              <Image
+                src="/girl_gorrito.png"
+                alt="Girl with gorrito betterment"
+                className="object-cover"
+                fill
+                sizes="(max-width: 96px) 100vw, 96px"
+              />
+            </div>
+          </div>
+
+          <div className="flex-1 h-full relative rounded-2xl overflow-hidden">
+            <Image
+              src="/man_gorrito.png"
+              alt="Man with gorrito betterment"
+              className="object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Product Info Section */}
+        <div className="flex flex-col gap-6">
+          <Card className="w-full max-w-md">
+            <CardHeader>
+              <CardTitle className="text-3xl text-primary font-bold">
+                {product.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-primary">
+              <div className="flex flex-col gap-2 text-sm">
+                <div className="flex items-center gap-x-2">
+                  <CheckCircle2 className="size-5 fill-primary stroke-white" />
+                  <p>Alivia dolores de cabeza y migrañas</p>
+                </div>
+                <div className="flex items-center gap-x-2">
+                  <CheckCircle2 className="size-5 fill-primary stroke-white" />
+                  <p>Reduce estrés y tensión muscular</p>
+                </div>
+                <div className="flex items-center gap-x-2">
+                  <CheckCircle2 className="size-5 fill-primary stroke-white" />
+                  <p>Ayuda a conciliar el sueño</p>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-between items-center">
+              <div className="flex items-center gap-x-4 text-primary text-lg">
+                <p className="line-through">S/. 99.90</p>
+                <p className="font-bold">
+                  S/.{" "}
+                  {Number.parseFloat(
+                    product.variants.nodes[0].price.amount
+                  ).toFixed(2)}
+                </p>
+              </div>
+              <Button
+                variant="secondary"
+                className="text-white text-lg font-semibold rounded-full px-8"
+              >
+                Comprar
+              </Button>
+            </CardFooter>
+          </Card>
+
+          <Accordion
+            type="single"
+            collapsible
+            className="w-[350px] px-8 text-white"
+          >
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Descripción</AccordionTrigger>
+              <AccordionContent className="text-xs">
+                Migrañas? Dolores de cabeza? Tensión? El Gorrito Antimigrañas
+                está diseñado para liberarte de estos males y brindarte el
+                alivio que necesitas. Usándolo frío, es altamente efectivo para
+                aliviar migrañas y dolores de cabeza, además de ayudarte a
+                relajarte profundamente. Su diseño ergonómico se ajusta
+                cómodamente a tu cabeza, ofreciendo una cobertura 360° que
+                abarca hasta los ojos. Bloquea por completo la luz y aplica una
+                presión ligera, ideal para aliviar tensiones. Y sí… ¡puedes
+                usarlo como antifaz para dormir con más frescura y comodidad!
+                <br /> Si prefieres, también puedes usarlo como una compresa.
+                Caliente, es ideal para aliviar cólicos menstruales, dolores
+                estomacales, molestias en la espalda o el cuello. También mejora
+                el flujo sanguíneo, reduce la rigidez articular y calma los
+                espasmos musculares, proporcionando un alivio cálido y
+                reconfortante. Fría, reduce la inflamación y alivia el dolor en
+                casos de golpes o lesiones, acelerando la recuperación muscular.
+                <br />
+                Incluye una bolsa hermética protectora e instrucciones de uso.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Materiales</AccordionTrigger>
+              <AccordionContent>
+                <ul>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-10" />
+                    Gel de glicerina con grado médico, apto para terapias de
+                    frío y calor.
+                  </li>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-10" />
+                    Funda de licra y nylon, suave, cómoda y protectora para la
+                    piel.
+                  </li>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-10" />
+                    Composición elástica y suave en todo momento (no se pondrá
+                    rígido)
+                  </li>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-6" />
+                    No condensa (no te mojará)
+                  </li>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-10" />
+                    No tóxico y sin olor (seguro y sencillo de usar)
+                  </li>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-10" />
+                    Mantiene el frío hasta por 30 minutos (¡máxima relajación!)
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Instrucciones de uso</AccordionTrigger>
+              <AccordionContent>
+                <ul>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-10" />
+                    Para enfriar, coloca el gorrito dentro de la bolsa hermética
+                    cerrada y déjalo en el congelador por al menos 1-2 horas.
+                    <br /> Si lo deseas, puedes dejarlo ahí permanentemente.
+                  </li>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-10" />
+                    Para calentar, retira el gorrito de la bolsa hermética y
+                    colócalo en un plato. <br />
+                    Calienta en el microondas en intervalos de 1 minuto hasta
+                    alcanzar la temperatura deseada.
+                  </li>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-10" />
+                    Para limpiar, nunca sumerjas el gorrito en agua. Usa un paño
+                    húmedo o una toalla para limpiarlo.
+                  </li>
+                  <li className="flex items-start gap-x-2">
+                    <Dot className="size-10" />
+                    Si el gorrito se corta y el gel queda expuesto, deja de
+                    usarlo y contáctanos para asistencia.
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>Envío y entrega</AccordionTrigger>
+              <AccordionContent>
+                Todos los envíos se realizan al día siguiente o hasta 48 horas
+                después. Si es a provincia, se dejará en engancha en este rango.
+                Nosotros te contactaremos minutos después de tu compra para
+                coordinar contigo el envío, queremos asegurarnos de que tu
+                paquete llegue sano y salvo!
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
       </div>
     </section>
   );
+  // return (
+  //   <section className="bg-low-primary grid grid-cols-1 sm:grid-cols-2 place-items-stretch gap-6 py-24 px-32">
+  //     <div className="grid grid-cols-6 gap-4">
+  //       <div className="col-span-2 flex flex-col gap-4 w-full">
+  //         <Image
+  //           src="/girl_gorrito_special.png"
+  //           alt="Girl with gorrito betterment"
+  //           className="rounded-xl w-full h-[30%]"
+  //           width={100}
+  //           height={100}
+  //         />
+  //         <Image
+  //           src="/girl_gorrito2.png"
+  //           alt="Girl with gorrito betterment 2"
+  //           className="rounded-xl w-full h-[30%]"
+  //           width={100}
+  //           height={100}
+  //         />
+  //         <Image
+  //           src="/girl_gorrito.png"
+  //           alt="Girl with gorrito betterment"
+  //           className="rounded-xl w-full h-[30%]"
+  //           width={100}
+  //           height={100}
+  //         />
+  //       </div>
+  //       <div className="col-span-4">
+  //         <Image
+  //           src="/man_gorrito.png"
+  //           alt="Man with gorrito betterment 2"
+  //           className="rounded-xl w-full h-[80%]"
+  //           width={100}
+  //           height={100}
+  //         />
+  //       </div>
+  //     </div>
+  //     <div className="flex flex-col w-full">
+  //       <Card className="w-[400px]">
+  //         <CardHeader>
+  //           <CardTitle className="text-3xl text-primary pt-1.5 font-bold">
+  //             Gorrito Anti-Migrañas
+  //           </CardTitle>
+  //         </CardHeader>
+  //         <CardContent className="text-primary">
+  //           <div className="flex flex-col gap-2 text-sm">
+  //             <div className="flex items-center gap-x-2">
+  //               <CheckCircle2 className="size-5 fill-primary stroke-white" />
+  //               <p>Alivia dolores de cabeza y migrañas</p>
+  //             </div>
+  //             <div className="flex items-center gap-x-2">
+  //               <CheckCircle2 className="size-5 fill-primary stroke-white" />
+  //               <p>Reduce estrés y tensión muscular</p>
+  //             </div>
+  //             <div className="flex items-center gap-x-2">
+  //               <CheckCircle2 className="size-5 fill-primary stroke-white" />
+  //               <p>Ayuda a conciliar el sueño</p>
+  //             </div>
+  //           </div>
+  //         </CardContent>
+  //         <CardFooter className="flex justify-between">
+  //           <div className="flex items-center gap-x-4 text-primary text-lg">
+  //             <p className="line-through">S/. 99.90</p>
+  //             <p className="font-bold">S/. 79.90</p>
+  //           </div>
+  //           <Button
+  //             variant="secondary"
+  //             className="text-center text-white text-lg font-semibold rounded-full w-36"
+  //           >
+  //             Comprar
+  //           </Button>
+  //         </CardFooter>
+  //       </Card>
+  //       <Accordion
+  //         type="single"
+  //         collapsible
+  //         className="w-[350px] px-8 text-white"
+  //       >
+  //         <AccordionItem value="item-1">
+  //           <AccordionTrigger>Descripción</AccordionTrigger>
+  //           <AccordionContent className="text-xs">
+  //             Migrañas? Dolores de cabeza? Tensión? El Gorrito Antimigrañas está
+  //             diseñado para liberarte de estos males y brindarte el alivio que
+  //             necesitas. Usándolo frío, es altamente efectivo para aliviar
+  //             migrañas y dolores de cabeza, además de ayudarte a relajarte
+  //             profundamente. Su diseño ergonómico se ajusta cómodamente a tu
+  //             cabeza, ofreciendo una cobertura 360° que abarca hasta los ojos.
+  //             Bloquea por completo la luz y aplica una presión ligera, ideal
+  //             para aliviar tensiones. Y sí… ¡puedes usarlo como antifaz para
+  //             dormir con más frescura y comodidad!
+  //             <br /> Si prefieres, también puedes usarlo como una compresa.
+  //             Caliente, es ideal para aliviar cólicos menstruales, dolores
+  //             estomacales, molestias en la espalda o el cuello. También mejora
+  //             el flujo sanguíneo, reduce la rigidez articular y calma los
+  //             espasmos musculares, proporcionando un alivio cálido y
+  //             reconfortante. Fría, reduce la inflamación y alivia el dolor en
+  //             casos de golpes o lesiones, acelerando la recuperación muscular.
+  //             <br />
+  //             Incluye una bolsa hermética protectora e instrucciones de uso.
+  //           </AccordionContent>
+  //         </AccordionItem>
+  //         <AccordionItem value="item-2">
+  //           <AccordionTrigger>Materiales</AccordionTrigger>
+  //           <AccordionContent>
+  //             <ul>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-10" />
+  //                 Gel de glicerina con grado médico, apto para terapias de frío
+  //                 y calor.
+  //               </li>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-10" />
+  //                 Funda de licra y nylon, suave, cómoda y protectora para la
+  //                 piel.
+  //               </li>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-10" />
+  //                 Composición elástica y suave en todo momento (no se pondrá
+  //                 rígido)
+  //               </li>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-6" />
+  //                 No condensa (no te mojará)
+  //               </li>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-10" />
+  //                 No tóxico y sin olor (seguro y sencillo de usar)
+  //               </li>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-10" />
+  //                 Mantiene el frío hasta por 30 minutos (¡máxima relajación!)
+  //               </li>
+  //             </ul>
+  //           </AccordionContent>
+  //         </AccordionItem>
+  //         <AccordionItem value="item-3">
+  //           <AccordionTrigger>Instrucciones de uso</AccordionTrigger>
+  //           <AccordionContent>
+  //             <ul>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-10" />
+  //                 Para enfriar, coloca el gorrito dentro de la bolsa hermética
+  //                 cerrada y déjalo en el congelador por al menos 1-2 horas.
+  //                 <br /> Si lo deseas, puedes dejarlo ahí permanentemente.
+  //               </li>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-10" />
+  //                 Para calentar, retira el gorrito de la bolsa hermética y
+  //                 colócalo en un plato. <br />
+  //                 Calienta en el microondas en intervalos de 1 minuto hasta
+  //                 alcanzar la temperatura deseada.
+  //               </li>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-10" />
+  //                 Para limpiar, nunca sumerjas el gorrito en agua. Usa un paño
+  //                 húmedo o una toalla para limpiarlo.
+  //               </li>
+  //               <li className="flex items-start gap-x-2">
+  //                 <Dot className="size-10" />
+  //                 Si el gorrito se corta y el gel queda expuesto, deja de usarlo
+  //                 y contáctanos para asistencia.
+  //               </li>
+  //             </ul>
+  //           </AccordionContent>
+  //         </AccordionItem>
+  //         <AccordionItem value="item-4">
+  //           <AccordionTrigger>Envío y entrega</AccordionTrigger>
+  //           <AccordionContent>
+  //             Todos los envíos se realizan al día siguiente o hasta 48 horas
+  //             después. Si es a provincia, se dejará en engancha en este rango.
+  //             Nosotros te contactaremos minutos después de tu compra para
+  //             coordinar contigo el envío, queremos asegurarnos de que tu paquete
+  //             llegue sano y salvo!
+  //           </AccordionContent>
+  //         </AccordionItem>
+  //       </Accordion>
+  //     </div>
+  //   </section>
+  // );
 }
 
 function ColdTherapy() {
@@ -506,7 +708,7 @@ function WarmTherapy() {
   );
 }
 
-export function MainInformation() {
+export async function MainInformation() {
   return (
     <main className="bg-[#fcfcf7]">
       <p className="text-center italic text-2xl text-primary">
