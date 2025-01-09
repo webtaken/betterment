@@ -18,3 +18,8 @@ export interface Price {
   amount: string;
   currencyCode: string;
 }
+
+export interface ShopifyCart {
+  id: string;
+  checkoutUrl: string;
+}

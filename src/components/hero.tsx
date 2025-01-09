@@ -1,6 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
-import { Button } from "./ui/button";
 import Image from "next/image";
+import { GoToGorrito1 } from "./go-to-gorrito";
 
 export function Hero() {
   return (
@@ -17,12 +17,7 @@ export function Hero() {
             en tu cuerpo, con la innovadora terapia de frío y calor: <br /> una{" "}
             <span className="font-bold">solución simple y cero invasiva</span>
           </p>
-          <Button
-            className="text-center text-white font-semibold rounded-2xl w-40"
-            variant="secondary"
-          >
-            DESCÚBRELO
-          </Button>
+          <GoToGorrito1 />
         </div>
         <div className="absolute -right-20 -top-32 w-[700px] h-[150%] -z-40">
           <div className="relative w-full h-full">

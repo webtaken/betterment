@@ -1,55 +1,22 @@
 "use client";
 
-export function VideoReviews() {
+import { ListBlobResultBlob } from "@vercel/blob";
+// import HeroVideoDialog from "@/components/ui/hero-video-dialog";
+
+export function VideoReviews({ videos }: { videos: ListBlobResultBlob[] }) {
   return (
     <div className="flex gap-x-4 justify-center my-4">
-      <video
-        width={320}
-        height={240}
-        controls
-        playsInline
-        preload="auto"
-        className="w-32 h-60"
-      >
-        <source src="/R0.mp4" type="video/mp4" />
-        Not supported video
-      </video>
-      <video
-        width={320}
-        height={240}
-        controls
-        playsInline
-        className="w-32 h-60"
-      >
-        <source src="/R1.mp4" type="video/mp4" />
-      </video>
-      <video
-        width={320}
-        height={240}
-        controls
-        playsInline
-        className="w-32 h-60"
-      >
-        <source src="/R2.mp4" type="video/mp4" />
-      </video>
-      <video
-        width={320}
-        height={240}
-        controls
-        playsInline
-        className="w-32 h-60"
-      >
-        <source src="/R3.mp4" type="video/mp4" />
-      </video>
-      <video
-        width={320}
-        height={240}
-        controls
-        playsInline
-        className="w-32 h-60"
-      >
-        <source src="/R4.mp4" type="video/mp4" />
-      </video>
+      {videos.map((video) => (
+        <video
+          key={video.url}
+          controls
+          playsInline
+          className="w-full max-w-xs aspect-video"
+        >
+          <source src={video.url} type="video/mp4" />
+          Not supported video
+        </video>
+      ))}
     </div>
   );
 }

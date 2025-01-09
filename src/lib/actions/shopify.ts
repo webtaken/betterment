@@ -1,4 +1,5 @@
 "use server";
+import { ShopifyProduct } from "@/data/types";
 import { createStorefrontApiClient } from "@shopify/storefront-api-client";
 
 const domain = process.env.SHOPIFY_STORE_DOMAIN as string;
@@ -36,6 +37,48 @@ export async function fetchGorritoInformation() {
       handle: "gorro-anti-migrana",
     },
   });
+
+  return { data, errors, extensions };
+}
+
+export async function checkoutAction(
+  product: ShopifyProduct,
+  quantity: number
+) {
+  const cartCreateMutation = `
+    mutation CreateCart($variantId: ID!, $quantity: Int!) {
+      cartCreate(
+        input: {
+          lines: [
+            {
+              merchandiseId: $variantId
+              quantity: $quantity
+            }
+          ]
+        }
+      ) {
+        cart {
+          id
+          checkoutUrl
+        }
+        userErrors {
+          message
+          code
+          field
+        }
+      }
+    }
+  `;
+
+  const { data, errors, extensions } = await client.request(
+    cartCreateMutation,
+    {
+      variables: {
+        variantId: product.variants.nodes[0].id,
+        quantity: quantity,
+      },
+    }
+  );
 
   return { data, errors, extensions };
 }

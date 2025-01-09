@@ -1,52 +1,63 @@
 "use client";
 
-import { useState } from "react";
-import { Minus, Plus, ShoppingCart, Trash } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Loader2, Minus, Plus, ShoppingCart, Trash } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
-interface CartItem {
-  name: string;
-  price: number;
-  quantity: number;
-}
+import { ShopifyCart, ShopifyProduct } from "@/data/types";
+import { fetchGorritoInformation, checkoutAction } from "@/lib/actions/shopify";
+import { useCartStore } from "@/stores/cart-store";
 
 export function ShoppingCartPopover() {
-  const [cartItem, setCartItem] = useState<CartItem>({
-    name: "Product Name",
-    price: 19.99,
-    quantity: 1,
-  });
+  const [loading, setLoading] = useState(false);
+  const { product, quantity, setProduct, increase, decrease, clearCart } =
+    useCartStore();
 
   const addItem = () => {
-    setCartItem((prev) => ({ ...prev, quantity: prev.quantity + 1 }));
+    increase();
   };
 
   const removeItem = () => {
-    setCartItem((prev) => ({
-      ...prev,
-      quantity: Math.max(0, prev.quantity - 1),
-    }));
+    decrease();
   };
 
-  const clearCart = () => {
-    setCartItem((prev) => ({ ...prev, quantity: 0 }));
+  const checkout = async () => {
+    if (!product || quantity === 0) return;
+    setLoading(true);
+    const { data } = await checkoutAction(product, quantity);
+    const cart = data.cartCreate.cart as ShopifyCart;
+    setLoading(false);
+    window.open(cart.checkoutUrl, "_blank");
   };
 
-  const total = cartItem.price * cartItem.quantity;
+  useEffect(() => {
+    async function fetchGorritoProduct() {
+      const { data } = await fetchGorritoInformation();
+      if (!data) return null;
+      const productFetched = data.product as ShopifyProduct;
+      setProduct(productFetched);
+    }
+    fetchGorritoProduct();
+  }, []);
 
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
           variant="ghost"
-          className="w-10 hover:bg-primary rounded-full p-0"
+          size="icon"
+          className="w-10 hover:bg-primary rounded-full p-0 relative"
         >
-          <ShoppingCart className="size-5 stroke-white" />
+          <ShoppingCart className="size-7 stroke-white" />
+          {quantity > 0 && (
+            <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs font-bold rounded-full size-5 flex items-center justify-center">
+              {quantity}
+            </span>
+          )}
           <span className="sr-only">Abrir carrito</span>
         </Button>
       </PopoverTrigger>
@@ -60,8 +71,16 @@ export function ShoppingCartPopover() {
           </div>
           <div className="grid gap-2">
             <div className="flex items-center justify-between">
-              <span className="font-medium">{cartItem.name}</span>
-              <span>${cartItem.price.toFixed(2)}</span>
+              <span className="font-medium">
+                {product?.title || "Cargando..."}
+              </span>
+              <span>
+                {product
+                  ? `S/.${Number.parseFloat(
+                      product.variants.nodes[0].price.amount
+                    ).toFixed(2)}`
+                  : "cargando..."}
+              </span>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
@@ -72,9 +91,9 @@ export function ShoppingCartPopover() {
                   onClick={removeItem}
                 >
                   <Minus className="h-4 w-4" />
-                  <span className="sr-only">Decrease quantity</span>
+                  <span className="sr-only">Decrementar cantidad</span>
                 </Button>
-                <span>{cartItem.quantity}</span>
+                <span>{quantity}</span>
                 <Button
                   variant="outline"
                   size="icon"
@@ -82,7 +101,7 @@ export function ShoppingCartPopover() {
                   onClick={addItem}
                 >
                   <Plus className="h-4 w-4" />
-                  <span className="sr-only">Increase quantity</span>
+                  <span className="sr-only">Incrementar cantidad</span>
                 </Button>
               </div>
               <Button
@@ -92,15 +111,34 @@ export function ShoppingCartPopover() {
                 onClick={clearCart}
               >
                 <Trash className="h-4 w-4" />
-                <span className="sr-only">Clear cart</span>
+                <span className="sr-only">Limpiar carrito</span>
               </Button>
             </div>
           </div>
           <div className="flex items-center justify-between">
             <span className="font-medium">Total:</span>
-            <span>${total.toFixed(2)}</span>
+            <span>
+              {product
+                ? `S/. ${(
+                    +product.variants.nodes[0].price.amount * quantity
+                  ).toFixed(2)}`
+                : "cargando..."}
+            </span>
           </div>
-          <Button className="w-full">Finalizar compra</Button>
+          <Button
+            className="w-full"
+            disabled={loading || quantity === 0}
+            onClick={checkout}
+          >
+            {loading ? (
+              <div className="flex items-center justify-center">
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Cargando...
+              </div>
+            ) : (
+              "Comprar"
+            )}
+          </Button>
         </div>
       </PopoverContent>
     </Popover>

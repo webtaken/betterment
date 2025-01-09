@@ -1,8 +1,13 @@
+import { allVideos } from "@/lib/actions/vercel-blob";
 import ReviewCard from "./review-card";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { VideoReviews } from "./video-reviews";
 
-export function Testimonials() {
+export async function Testimonials() {
+  const videos = await allVideos();
+
+  console.log(videos);
+
   return (
     <div className="bg-low-primary relative -top-16 -z-30 pb-5">
       <p className="text-center text-white text-2xl pt-10 font-bold">
@@ -65,7 +70,7 @@ export function Testimonials() {
       <p className="text-center italic text-white text-3xl font-bold">
         Clientes felices y libres de migraña
       </p>
-      <VideoReviews />
+      <VideoReviews videos={videos} />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   CheckCircle2,
   Cloudy,
   Dot,
@@ -23,9 +22,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
-import { Button } from "./ui/button";
 import Image from "next/image";
 import { fetchGorritoInformation } from "@/lib/actions/shopify";
+import { ShopifyProduct } from "@/data/types";
+import { AddToCart } from "./add-to-cart";
+import { GoToGorrito2, GoToGorrito3 } from "./go-to-gorrito";
 
 function ManWithGorrito() {
   return (
@@ -96,12 +97,7 @@ function ManWithGorrito() {
             </div>
           </div>
           <div className="flex justify-end">
-            <Button
-              className="flex items-center text-white font-semibold rounded-2xl w-40"
-              variant="link"
-            >
-              Más información <ArrowRight className="stroke-white" />
-            </Button>
+            <GoToGorrito3 />
           </div>
         </div>
       </section>
@@ -155,12 +151,7 @@ function WomanWithGorrito() {
                 quieras
               </p>
             </div>
-            <Button
-              className="text-center text-white font-semibold rounded-2xl w-40"
-              variant="default"
-            >
-              ¡LO QUIERO!
-            </Button>
+            <GoToGorrito2 />
           </div>
         </div>
         <div className="absolute w-[500px] h-[600px] right-12 -top-8">
@@ -180,11 +171,13 @@ function WomanWithGorrito() {
 async function GorritoPrice() {
   const { data } = await fetchGorritoInformation();
   if (!data) return null;
-  const product = data.product;
-  console.log(JSON.stringify(product, null, 2));
-  console.log(product.variants);
+  const product = data.product as ShopifyProduct;
+
   return (
-    <section className="bg-low-primary min-h-screen py-12 px-4 md:px-8 lg:px-16">
+    <section
+      id="gorrito"
+      className="bg-low-primary min-h-screen py-12 px-4 md:px-8 lg:px-16"
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex gap-4 h-[500px]">
           <div className="flex flex-col gap-4 w-24">
@@ -257,18 +250,12 @@ async function GorritoPrice() {
               <div className="flex items-center gap-x-4 text-primary text-lg">
                 <p className="line-through">S/. 99.90</p>
                 <p className="font-bold">
-                  S/.{" "}
-                  {Number.parseFloat(
+                  {`S/. ${Number.parseFloat(
                     product.variants.nodes[0].price.amount
-                  ).toFixed(2)}
+                  ).toFixed(2)}`}
                 </p>
               </div>
-              <Button
-                variant="secondary"
-                className="text-white text-lg font-semibold rounded-full px-8"
-              >
-                Comprar
-              </Button>
+              <AddToCart />
             </CardFooter>
           </Card>
 
