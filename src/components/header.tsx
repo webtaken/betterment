@@ -8,7 +8,7 @@ export function Header() {
           Envío GRATIS a ciertas zonas
         </p>
       </section>
-      <section className="bg-[#5fb9d1] grid grid-cols-3 items-center py-3">
+      <section className="bg-low-primary grid grid-cols-3 items-center py-3">
         <p className="col-start-2 text-center text-white text-2xl font-bold">
           Betterment
         </p>
