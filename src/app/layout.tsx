@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { WhatsappButton } from "@/components/whatsapp-button";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={`${montserrat.className} antialiased min-w-[500px]`}>
         <Header />
         {children}
+        <WhatsappButton />
         <Footer />
         <Toaster />
       </body>

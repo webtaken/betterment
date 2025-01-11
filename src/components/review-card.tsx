@@ -1,7 +1,7 @@
 import { Star, ShieldCheck } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-interface ReviewCardProps {
+export interface ReviewCardProps {
   name: string;
   isVerified?: boolean;
   review: string;
@@ -15,10 +15,13 @@ export default function ReviewCard({
   review,
   date,
   rating = 5,
-}: ReviewCardProps) {
+  className,
+}: ReviewCardProps & { className?: string }) {
   return (
-    <Card className="w-full max-w-xs shadow-xl border-0">
-      <CardContent className="p-4 space-y-2">
+    <Card
+      className={`w-[200px] flex-none shadow-xl border-0 mt-4 ${className}`}
+    >
+      <CardContent className="p-4 space-y-1">
         <div className="flex gap-1 justify-center relative -top-6 bg-white rounded-full shadow-md py-2 w-[150px] mx-auto">
           {[...Array(rating)].map((_, i) => (
             <Star
@@ -28,16 +31,16 @@ export default function ReviewCard({
           ))}
         </div>
 
-        <div className="flex items-center gap-1 justify-center">
+        <div className="flex items-center gap-1 justify-center text-sm">
           <span className="font-semibold">{name}</span>
           {isVerified && (
             <ShieldCheck className="w-4 h-4 fill-emerald-500 stroke-white" />
           )}
         </div>
 
-        <p className="text-sm text-muted-foreground">{review}</p>
+        <p className="text-xs text-muted-foreground">{review}</p>
 
-        <time className="block text-sm text-muted-foreground text-right">
+        <time className="block text-xs text-muted-foreground text-right">
           {date}
         </time>
       </CardContent>

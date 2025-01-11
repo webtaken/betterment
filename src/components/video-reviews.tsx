@@ -1,21 +1,40 @@
 "use client";
 
-import { ListBlobResultBlob } from "@vercel/blob";
-// import HeroVideoDialog from "@/components/ui/hero-video-dialog";
+import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 
-export function VideoReviews({ videos }: { videos: ListBlobResultBlob[] }) {
+const videos = [
+  {
+    url: "https://www.youtube.com/embed/FiTqrbqN0mQ",
+    thumbnail: "/r0_thumbnail.jpg",
+  },
+  {
+    url: "https://www.youtube.com/embed/_5UeWb-_XeU",
+    thumbnail: "/r1_thumbnail.jpg",
+  },
+  {
+    url: "https://www.youtube.com/embed/6_8_ErT1i-Q",
+    thumbnail: "/r2_thumbnail.jpg",
+  },
+  {
+    url: "https://www.youtube.com/embed/pTDTm9b4BQg",
+    thumbnail: "/r3_thumbnail.jpg",
+  },
+  {
+    url: "https://www.youtube.com/embed/sxJHpfW1rEc",
+    thumbnail: "/r4_thumbnail.jpg",
+  },
+];
+
+export function VideoReviews() {
   return (
     <div className="flex gap-x-4 justify-center my-4">
       {videos.map((video) => (
-        <video
+        <HeroVideoDialog
           key={video.url}
-          controls
-          playsInline
-          className="w-full max-w-xs aspect-video"
-        >
-          <source src={video.url} type="video/mp4" />
-          Not supported video
-        </video>
+          videoSrc={video.url}
+          thumbnailSrc={video.thumbnail}
+          className="w-[150px] h-[250px]"
+        />
       ))}
     </div>
   );
