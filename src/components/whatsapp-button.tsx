@@ -7,6 +7,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import WhatsApp from "@/assets/whatsapp";
+import Link from "next/link";
 
 export function WhatsappButton() {
   return (
@@ -16,11 +17,11 @@ export function WhatsappButton() {
           <Button
             className="size-10 bg-green-600 hover:bg-green-600 fixed bottom-4 right-4 rounded-full shadow-lg z-50"
             size="icon"
-            onClick={() => {
-              console.log("whatsapp action");
-            }}
+            asChild
           >
-            <WhatsApp />
+            <Link href="https://wa.link/94d9qp" target="_blank">
+              <WhatsApp className="size-10" />
+            </Link>
           </Button>
         </TooltipTrigger>
         <TooltipContent>
