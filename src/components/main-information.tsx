@@ -23,8 +23,8 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import Image from "next/image";
-import { fetchGorritoInformation } from "@/lib/actions/shopify";
-import { ShopifyProduct } from "@/data/types";
+// import { fetchGorritoInformation } from "@/lib/actions/shopify";
+// import { ShopifyProduct } from "@/data/types";
 import { AddToCart } from "./add-to-cart";
 import { GoToGorrito2, GoToGorrito3 } from "./go-to-gorrito";
 
@@ -169,16 +169,16 @@ function WomanWithGorrito() {
 }
 
 async function GorritoPrice() {
-  const { data } = await fetchGorritoInformation();
-  if (!data) return null;
-  const product = data.product as ShopifyProduct;
+  // const { data } = await fetchGorritoInformation();
+  // if (!data) return null;
+  // const product = data.product as ShopifyProduct;
 
   return (
     <section
       id="gorrito"
-      className="bg-low-primary min-h-screen py-12 px-4 md:px-8 lg:px-16"
+      className="bg-low-primary min-h-screen pt-12 px-4 md:px-8 lg:px-16"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex gap-4 h-[500px]">
           <div className="flex flex-col gap-4 w-24">
             <div className="h-[32%] relative rounded-lg overflow-hidden">
@@ -227,7 +227,8 @@ async function GorritoPrice() {
           <Card className="w-full max-w-md">
             <CardHeader>
               <CardTitle className="text-3xl text-primary font-bold">
-                {product.title}
+                {/* product.title */}
+                Gorrito Anti-Migrañas
               </CardTitle>
             </CardHeader>
             <CardContent className="text-primary">
@@ -250,9 +251,10 @@ async function GorritoPrice() {
               <div className="flex items-center gap-x-4 text-primary text-lg">
                 <p className="line-through">S/. 99.90</p>
                 <p className="font-bold">
-                  {`S/. ${Number.parseFloat(
+                  {/* `S/. ${Number.parseFloat(
                     product.variants.nodes[0].price.amount
-                  ).toFixed(2)}`}
+                  ).toFixed(2)}` */}
+                  S/. 79.90
                 </p>
               </div>
               <AddToCart />
@@ -697,7 +699,7 @@ function WarmTherapy() {
 
 export async function MainInformation() {
   return (
-    <main className="bg-[#fcfcf7]">
+    <main className="bg-low-white">
       <p className="text-center italic text-2xl text-primary">
         Descubre todos los beneficios de
       </p>

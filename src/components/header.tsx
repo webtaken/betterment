@@ -1,4 +1,4 @@
-import { ShoppingCartPopover } from "./shopping-cart";
+// import { ShoppingCartPopover } from "./shopping-cart";
 
 export function Header() {
   return (
@@ -12,9 +12,9 @@ export function Header() {
         <p className="col-start-2 text-center text-white text-2xl font-bold">
           Betterment
         </p>
-        <div className="flex justify-center items-center gap-2">
+        {/* <div className="flex justify-center items-center gap-2">
           <ShoppingCartPopover />
-        </div>
+        </div> */}
       </section>
       <section className="bg-secondary py-1">
         <p className="text-center text-white text-sm font-semibold">
