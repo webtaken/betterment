@@ -1,5 +1,7 @@
 // import { ShoppingCartPopover } from "./shopping-cart";
 
+import Image from "next/image";
+
 export function Header() {
   return (
     <header className="min-w-[500px]">
@@ -8,10 +10,20 @@ export function Header() {
           Envío GRATIS a ciertas zonas
         </p>
       </section>
-      <section className="bg-low-primary grid grid-cols-3 items-center py-3">
-        <p className="col-start-2 text-center text-white text-2xl font-bold">
-          Betterment
-        </p>
+      <section className="bg-low-primary flex justify-center items-center py-6">
+        <div className="flex items-center gap-2">
+          <Image
+            src="/logo.png"
+            alt="Logo Betterment"
+            width={100}
+            height={100}
+            className="size-8"
+          />
+          <p className="col-start-2 text-center text-white text-3xl font-bold">
+            Betterment
+          </p>
+        </div>
+
         {/* <div className="flex justify-center items-center gap-2">
           <ShoppingCartPopover />
         </div> */}

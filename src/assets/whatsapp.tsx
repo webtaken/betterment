@@ -5,7 +5,7 @@ const WhatsApp = ({
   ...props
 }: SVGProps<SVGSVGElement> & { className?: string }) => (
   <svg
-    viewBox="0 0 256 259"
+    viewBox="0 0 259 259"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMidYMid"
     width={"1em"}

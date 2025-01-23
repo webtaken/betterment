@@ -20,7 +20,7 @@ export function WhatsappButton() {
             asChild
           >
             <Link href="https://wa.link/94d9qp" target="_blank">
-              <WhatsApp className="size-10" />
+              <WhatsApp className="size-20" />
             </Link>
           </Button>
         </TooltipTrigger>
