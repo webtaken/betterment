@@ -18,7 +18,7 @@ export function AddToCart() {
       // }}
     >
       <Link href="https://wa.link/94d9qp" target="_blank">
-        Comprar producto
+        Comprar por WhatsApp
       </Link>
     </Button>
   );

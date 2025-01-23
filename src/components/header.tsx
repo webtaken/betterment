@@ -1,6 +1,7 @@
 // import { ShoppingCartPopover } from "./shopping-cart";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -11,7 +12,7 @@ export function Header() {
         </p>
       </section>
       <section className="bg-low-primary flex justify-center items-center py-6">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src="/logo.png"
             alt="Logo Betterment"
@@ -22,7 +23,7 @@ export function Header() {
           <p className="col-start-2 text-center text-white text-3xl font-bold">
             Betterment
           </p>
-        </div>
+        </Link>
 
         {/* <div className="flex justify-center items-center gap-2">
           <ShoppingCartPopover />

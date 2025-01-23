@@ -27,6 +27,7 @@ import Image from "next/image";
 // import { ShopifyProduct } from "@/data/types";
 import { AddToCart } from "./add-to-cart";
 import { GoToGorrito2, GoToGorrito3 } from "./go-to-gorrito";
+import { Carousel } from "./carousel";
 
 function ManWithGorrito() {
   return (
@@ -179,52 +180,11 @@ async function GorritoPrice() {
       className="bg-low-primary min-h-screen pt-12 px-4 md:px-8 lg:px-16"
     >
       <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex gap-4 h-[500px]">
-          <div className="flex flex-col gap-4 w-24">
-            <div className="h-[32%] relative rounded-lg overflow-hidden">
-              <Image
-                src="/girl_gorrito_special.png"
-                alt="Girl with gorrito betterment"
-                className="object-cover"
-                fill
-                sizes="(max-width: 96px) 100vw, 96px"
-              />
-            </div>
-            <div className="h-[32%] relative rounded-lg overflow-hidden">
-              <Image
-                src="/girl_gorrito2.png"
-                alt="Girl with gorrito betterment 2"
-                className="object-cover"
-                fill
-                sizes="(max-width: 96px) 100vw, 96px"
-              />
-            </div>
-            <div className="h-[32%] relative rounded-lg overflow-hidden">
-              <Image
-                src="/girl_gorrito.png"
-                alt="Girl with gorrito betterment"
-                className="object-cover"
-                fill
-                sizes="(max-width: 96px) 100vw, 96px"
-              />
-            </div>
-          </div>
-
-          <div className="flex-1 h-full relative rounded-2xl overflow-hidden">
-            <Image
-              src="/man_gorrito.png"
-              alt="Man with gorrito betterment"
-              className="object-cover"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
-          </div>
-        </div>
+        <Carousel />
 
         {/* Product Info Section */}
         <div className="flex flex-col gap-6">
-          <Card className="w-full max-w-md">
+          <Card className="w-full max-w-lg">
             <CardHeader>
               <CardTitle className="text-3xl text-primary font-bold">
                 {/* product.title */}
@@ -548,154 +508,154 @@ async function GorritoPrice() {
   // );
 }
 
-function ColdTherapy() {
-  return (
-    <div className="max-w-5xl mx-auto px-8 py-12 flex flex-col md:flex-row items-center gap-8 bg-low-white">
-      <div className="flex-1">
-        <div className="space-y-4">
-          <p className="text-sky-400 text-2xl">Descubre los beneficios de</p>
-          <div className="flex items-center gap-2">
-            <Snowflake className="size-14 stroke-primary" />
-            <h1 className="text-primary text-4xl font-bold">
-              La Terapia
-              <br />
-              de Frío
-            </h1>
-          </div>
-          <p className="text-gray-600 text-sm md:text-base">
-            También conocida como <span className="font-bold">crioterapia</span>
-            , consiste en aplicar frio a zonas del cuerpo para producir cambios{" "}
-            <br />
-            fisiológicos.
-          </p>
-        </div>
-      </div>
+// function ColdTherapy() {
+//   return (
+//     <div className="max-w-5xl mx-auto px-8 py-12 flex flex-col md:flex-row items-center gap-8 bg-low-white">
+//       <div className="flex-1">
+//         <div className="space-y-4">
+//           <p className="text-sky-400 text-2xl">Descubre los beneficios de</p>
+//           <div className="flex items-center gap-2">
+//             <Snowflake className="size-14 stroke-primary" />
+//             <h1 className="text-primary text-4xl font-bold">
+//               La Terapia
+//               <br />
+//               de Frío
+//             </h1>
+//           </div>
+//           <p className="text-gray-600 text-sm md:text-base">
+//             También conocida como <span className="font-bold">crioterapia</span>
+//             , consiste en aplicar frio a zonas del cuerpo para producir cambios{" "}
+//             <br />
+//             fisiológicos.
+//           </p>
+//         </div>
+//       </div>
 
-      <div className="flex-1 w-[500px] h-[500px]">
-        <div className="bg-low-primary text-white text-center px-8 py-28 rounded-full">
-          <ul className="pl-20 sm:pl-16 md:pl-16">
-            <li className="flex items-start gap-2">
-              <Snowflake className="size-5" />
-              <p className="font-medium">
-                <span className="font-bold">Alivia dolores de cabeza,</span>
-                <br /> migrañas y fiebre
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <Snowflake className="size-5" />
-              <p className="font-medium">
-                <span className="font-bold">
-                  Aliviar el estrés y la tensión
-                </span>
-                <br />
-                acumulada
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <Snowflake className="size-5" />
-              <p className="font-medium">
-                <span className="font-bold">
-                  Reduce la inflamación local y<br /> alivia el dolor
-                </span>{" "}
-                tras un golpe o <br />
-                lesión
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <Snowflake className="size-5" />
-              <p className="font-medium">
-                Acelera la{" "}
-                <span className="font-bold">recuperación muscular</span>
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <Snowflake className="size-5" />
-              <p className="font-medium">
-                <span className="font-bold">Mejora tu circulación</span> para
-                <br />
-                sentirte con más energía
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-}
+//       <div className="flex-1 w-[500px] h-[500px]">
+//         <div className="bg-low-primary text-white text-center px-8 py-28 rounded-full">
+//           <ul className="pl-20 sm:pl-16 md:pl-16">
+//             <li className="flex items-start gap-2">
+//               <Snowflake className="size-5" />
+//               <p className="font-medium">
+//                 <span className="font-bold">Alivia dolores de cabeza,</span>
+//                 <br /> migrañas y fiebre
+//               </p>
+//             </li>
+//             <li className="flex items-start gap-2">
+//               <Snowflake className="size-5" />
+//               <p className="font-medium">
+//                 <span className="font-bold">
+//                   Aliviar el estrés y la tensión
+//                 </span>
+//                 <br />
+//                 acumulada
+//               </p>
+//             </li>
+//             <li className="flex items-start gap-2">
+//               <Snowflake className="size-5" />
+//               <p className="font-medium">
+//                 <span className="font-bold">
+//                   Reduce la inflamación local y<br /> alivia el dolor
+//                 </span>{" "}
+//                 tras un golpe o <br />
+//                 lesión
+//               </p>
+//             </li>
+//             <li className="flex items-start gap-2">
+//               <Snowflake className="size-5" />
+//               <p className="font-medium">
+//                 Acelera la{" "}
+//                 <span className="font-bold">recuperación muscular</span>
+//               </p>
+//             </li>
+//             <li className="flex items-start gap-2">
+//               <Snowflake className="size-5" />
+//               <p className="font-medium">
+//                 <span className="font-bold">Mejora tu circulación</span> para
+//                 <br />
+//                 sentirte con más energía
+//               </p>
+//             </li>
+//           </ul>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
-function WarmTherapy() {
-  return (
-    <div className="max-w-5xl mx-auto px-8 py-12 flex flex-col md:flex-row items-center gap-8 bg-low-white">
-      <div className="flex-1">
-        <div className="space-y-4">
-          <p className="text-secondary text-2xl">Descubre los beneficios de</p>
-          <div className="flex items-center gap-2">
-            <Flame className="size-14 stroke-strong-secondary" />
-            <h1 className="text-strong-secondary text-4xl font-bold">
-              La Terapia
-              <br />
-              de Calor
-            </h1>
-          </div>
-          <p className="text-gray-600 text-sm md:text-base">
-            También conocida como{" "}
-            <span className="font-bold">termoterapia</span>, consiste en aplicar
-            calor a zonas del cuerpo para producir cambios <br />
-            fisiológicos.
-          </p>
-        </div>
-      </div>
+// function WarmTherapy() {
+//   return (
+//     <div className="max-w-5xl mx-auto px-8 py-12 flex flex-col md:flex-row items-center gap-8 bg-low-white">
+//       <div className="flex-1">
+//         <div className="space-y-4">
+//           <p className="text-secondary text-2xl">Descubre los beneficios de</p>
+//           <div className="flex items-center gap-2">
+//             <Flame className="size-14 stroke-strong-secondary" />
+//             <h1 className="text-strong-secondary text-4xl font-bold">
+//               La Terapia
+//               <br />
+//               de Calor
+//             </h1>
+//           </div>
+//           <p className="text-gray-600 text-sm md:text-base">
+//             También conocida como{" "}
+//             <span className="font-bold">termoterapia</span>, consiste en aplicar
+//             calor a zonas del cuerpo para producir cambios <br />
+//             fisiológicos.
+//           </p>
+//         </div>
+//       </div>
 
-      <div className="flex-1 w-[400px] h-[400px]">
-        <div className="bg-secondary text-white text-center px-8 py-28 rounded-full">
-          <ul className="pl-20 sm:pl-16 md:pl-16">
-            <li className="flex items-start gap-2">
-              <Flame className="size-5" />
-              <p className="font-medium">
-                <span className="font-bold">
-                  Alivia cólicos menstruales,
-                  <br /> estomacales y dolor lumbar
-                </span>
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <Flame className="size-5" />
-              <p className="font-medium">
-                Alivia <span className="font-bold">dolores crónicos</span> de
-                espalda
-                <br /> o cuello
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <Flame className="size-5" />
-              <p className="font-medium">
-                Aumenta el <span className="font-bold">flujo sanguíneo</span>
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <Flame className="size-5" />
-              <p className="font-medium">
-                <span className="font-bold">
-                  Disminuye la rigidez articular
-                </span>
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <Flame className="size-5" />
-              <p className="font-medium">
-                Alivia el dolor de{" "}
-                <span className="font-bold">
-                  espasmos
-                  <br /> musculares
-                </span>
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-}
+//       <div className="flex-1 w-[400px] h-[400px]">
+//         <div className="bg-secondary text-white text-center px-8 py-28 rounded-full">
+//           <ul className="pl-20 sm:pl-16 md:pl-16">
+//             <li className="flex items-start gap-2">
+//               <Flame className="size-5" />
+//               <p className="font-medium">
+//                 <span className="font-bold">
+//                   Alivia cólicos menstruales,
+//                   <br /> estomacales y dolor lumbar
+//                 </span>
+//               </p>
+//             </li>
+//             <li className="flex items-start gap-2">
+//               <Flame className="size-5" />
+//               <p className="font-medium">
+//                 Alivia <span className="font-bold">dolores crónicos</span> de
+//                 espalda
+//                 <br /> o cuello
+//               </p>
+//             </li>
+//             <li className="flex items-start gap-2">
+//               <Flame className="size-5" />
+//               <p className="font-medium">
+//                 Aumenta el <span className="font-bold">flujo sanguíneo</span>
+//               </p>
+//             </li>
+//             <li className="flex items-start gap-2">
+//               <Flame className="size-5" />
+//               <p className="font-medium">
+//                 <span className="font-bold">
+//                   Disminuye la rigidez articular
+//                 </span>
+//               </p>
+//             </li>
+//             <li className="flex items-start gap-2">
+//               <Flame className="size-5" />
+//               <p className="font-medium">
+//                 Alivia el dolor de{" "}
+//                 <span className="font-bold">
+//                   espasmos
+//                   <br /> musculares
+//                 </span>
+//               </p>
+//             </li>
+//           </ul>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 export async function MainInformation() {
   return (
@@ -816,10 +776,10 @@ export async function MainInformation() {
       <ManWithGorrito />
       <WomanWithGorrito />
       <GorritoPrice />
-      <div className="bg-[#c8e9eb] w-full h-5" />
+      {/* <div className="bg-[#c8e9eb] w-full h-5" />
       <ColdTherapy />
       <div className="bg-[#c8e9eb] w-full h-5" />
-      <WarmTherapy />
+      <WarmTherapy /> */}
     </main>
   );
 }

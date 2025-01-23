@@ -1,6 +1,7 @@
 import Facebook from "@/assets/facebook";
 import Instagram from "@/assets/instagram";
 import Tiktok from "@/assets/tiktok";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -8,8 +9,16 @@ export function Footer() {
     <footer className="bg-primary min-w-[500px] py-10 px-4 sm:px-10 md:px-32 flex flex-col gap-y-10">
       <div className="flex justify-between text-white gap-x-10">
         <div className="flex flex-col">
-          <h1 className="text-3xl font-bold">Betterment</h1>
-          <p className="text-sm">Recibe Ofertas, Descuentos, Premios y más!</p>
+          <Link href="/" className="flex items-center gap-x-2">
+            <Image
+              src="/logo.png"
+              alt="Logo Betterment"
+              width={100}
+              height={100}
+              className="size-8"
+            />
+            <h1 className="text-3xl font-bold">Betterment</h1>
+          </Link>
           <Link href="/" className="text-white hover:underline mt-10">
             © 2025, Betterment Pe
           </Link>
