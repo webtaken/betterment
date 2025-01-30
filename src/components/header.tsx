@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Header() {
   return (
-    <header className="min-w-[500px]">
+    <header className="min-w-full">
       <section className="bg-primary text-center py-1">
         <p className="text-white italic text-[10px]">
           Envío GRATIS a ciertas zonas
@@ -24,7 +24,6 @@ export function Header() {
             Betterment
           </p>
         </Link>
-
         {/* <div className="flex justify-center items-center gap-2">
           <ShoppingCartPopover />
         </div> */}

@@ -102,7 +102,7 @@ function ManWithGorrito() {
           </div>
         </div>
       </section>
-      <div className="relative -top-10 bg-secondary rounded-full flex items-center gap-4 justify-center w-[500px] md:w-[900px] mx-auto py-1 md:py-3 text-xs md:text-sm z-50">
+      <div className="relative -top-10 bg-secondary rounded-full flex items-center gap-4 justify-center w-fit mx-auto py-1 md:py-3 text-xs px-4 md:text-sm z-50">
         <p className="text-white text-xs md:text-lg text-center font-normal">
           <span className="font-bold">
             Contiene un gel de glicerina en grado médico
@@ -121,12 +121,12 @@ function WomanWithGorrito() {
   return (
     <div className="relative">
       <section className="flex relative h-[568px] overflow-visible">
-        <div className="flex flex-col w-full pl-12 md:pl-28 my-auto space-y-2 z-10">
+        <div className="flex flex-col w-full pl-8 sm:pl-12 md:pl-28 my-auto space-y-2 z-10">
           <p className="text-primary text-2xl">Decirle adiós a la migraña...</p>
           <p className="text-[#5fb9d1] text-xl sm:text-2xl md:text-4xl font-bold">
             ¡Nunca fue tan fácil!
           </p>
-          <div className="pl-16 space-y-4 pt-6">
+          <div className="pl-4 sm:pl-8 md:pl-16 space-y-4 pt-6">
             <div className="flex items-center gap-x-4">
               <p className="text-6xl font-bold text-secondary">1</p>
               <p className="text-sx sm:text-sm md:text-base">
@@ -177,7 +177,7 @@ async function GorritoPrice() {
   return (
     <section
       id="gorrito"
-      className="bg-low-primary min-h-screen pt-12 px-4 md:px-8 lg:px-16"
+      className="bg-low-primary pt-12 px-4 md:px-8 lg:px-16"
     >
       <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <Carousel />
@@ -207,7 +207,7 @@ async function GorritoPrice() {
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="flex justify-between items-center">
+            <CardFooter className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center gap-x-4 text-primary text-lg">
                 <p className="line-through">S/. 99.90</p>
                 <p className="font-bold">
@@ -224,7 +224,7 @@ async function GorritoPrice() {
           <Accordion
             type="single"
             collapsible
-            className="w-[350px] px-8 text-white"
+            className="w-full mb-4 sm:w-[350px] px-8 text-white"
           >
             <AccordionItem value="item-1">
               <AccordionTrigger>Descripción</AccordionTrigger>
@@ -666,8 +666,8 @@ export async function MainInformation() {
       <p className="text-center text-primary text-4xl font-bold">
         Tu Gorrito Anti-Migrañas
       </p>
-      <div className="flex justify-center gap-x-8 md:gap-x-14 my-10 px-2">
-        <Card className="bg-primary text-white w-[350px] rounded-3xl">
+      <div className="flex flex-col sm:flex-row justify-center gap-x-8 gap-y-4 md:gap-x-14 my-10 px-2">
+        <Card className="bg-primary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
           <CardHeader>
             <CardTitle className="text-center">Crioterapia</CardTitle>
           </CardHeader>
@@ -723,7 +723,7 @@ export async function MainInformation() {
             </div>
           </CardContent>
         </Card>
-        <Card className="bg-secondary text-white w-[350px] rounded-3xl">
+        <Card className="bg-secondary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
           <CardHeader>
             <CardTitle className="text-center">Termoterapia</CardTitle>
           </CardHeader>

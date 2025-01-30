@@ -27,7 +27,7 @@ const videos = [
 
 export function VideoReviews() {
   return (
-    <div className="flex gap-x-4 justify-center my-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-y-8 justify-items-center my-4">
       {videos.map((video) => (
         <HeroVideoDialog
           key={video.url}

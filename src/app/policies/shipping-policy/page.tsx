@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <main className="px-20 sm:px-32 md:px-52 py-8 text-zinc-600">
+    <main className="px-10 sm:px-32 md:px-52 py-8 text-zinc-600">
       <h1 className="text-4xl font-bold">Política de envío</h1>
       <br />
       <p>

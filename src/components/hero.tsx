@@ -31,7 +31,7 @@ export function Hero() {
           </div>
         </div>
       </section>
-      <div className="relative -top-8 bg-primary rounded-full flex items-center gap-4 justify-center w-[500px] md:w-[540px] mx-auto py-1 md:py-3 z-10 text-xs md:text-sm">
+      <div className="relative -top-8 bg-primary rounded-full flex items-center gap-4 justify-center w-fit md:w-[540px] mx-auto px-4 py-1 md:py-3 z-10 text-xs md:text-sm">
         <div className="flex items-center">
           <CheckCircle2 className="size-8 fill-white stroke-primary" />{" "}
           <p className="text-white font-semibold">

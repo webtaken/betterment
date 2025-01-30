@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-primary min-w-[500px] py-10 px-4 sm:px-10 md:px-32 flex flex-col gap-y-10">
-      <div className="flex justify-between text-white gap-x-10">
+    <footer className="bg-primary py-10 px-4 sm:px-10 md:px-32 flex flex-col gap-y-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-white gap-10">
         <div className="flex flex-col">
           <Link href="/" className="flex items-center gap-x-2">
             <Image

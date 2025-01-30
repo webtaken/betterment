@@ -23,11 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} antialiased min-w-[500px]`}>
-        <Header />
-        {children}
-        <WhatsappButton />
-        <Footer />
+      <body className={`${montserrat.className} antialiased`}>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          {children}
+          <WhatsappButton />
+          <Footer />
+        </div>
         <Toaster />
       </body>
     </html>
