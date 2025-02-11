@@ -5,14 +5,16 @@ import { Link as ScrollLink } from "react-scroll";
 
 export function GoToGorrito1() {
   return (
-    <ScrollLink to={"gorrito"} spy={true} smooth={true} duration={800}>
-      <Button
-        className="text-center text-white font-semibold rounded-2xl w-40"
-        variant="secondary"
-      >
-        DESCÚBRELO
-      </Button>
-    </ScrollLink>
+    <div className="flex justify-center sm:justify-normal">
+      <ScrollLink to={"gorrito"} spy={true} smooth={true} duration={800}>
+        <Button
+          className="text-center text-white font-semibold rounded-2xl w-40"
+          variant="secondary"
+        >
+          DESCÚBRELO
+        </Button>
+      </ScrollLink>
+    </div>
   );
 }
 

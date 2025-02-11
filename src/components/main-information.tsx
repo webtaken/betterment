@@ -28,6 +28,9 @@ import Image from "next/image";
 import { AddToCart } from "./add-to-cart";
 import { GoToGorrito2, GoToGorrito3 } from "./go-to-gorrito";
 import { Carousel } from "./carousel";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 function ManWithGorrito() {
   return (
@@ -37,8 +40,8 @@ function ManWithGorrito() {
           Respaldado por la ciencia
         </p>
       </div>
-      <section className="flex relative h-[500px] bg-primary overflow-hidden">
-        <div className="absolute w-[800px] h-[700px] -left-48 -top-12">
+      <section className="flex relative h-[500px] md:h-[650px] bg-primary overflow-hidden">
+        <div className="absolute w-[500px] md:w-[730px] h-[700px] -top-2 -left-64 min-[1048px]:-left-36 lg:-left-48 xl:-left-3.5 2xl:-left-[-8%]">
           <Image
             src="/man.png"
             alt="Man with betterment"
@@ -102,8 +105,8 @@ function ManWithGorrito() {
           </div>
         </div>
       </section>
-      <div className="relative -top-10 bg-secondary rounded-full flex items-center gap-4 justify-center w-fit mx-auto py-1 md:py-3 text-xs px-4 md:text-sm z-50">
-        <p className="text-white text-xs md:text-lg text-center font-normal">
+      <div className="relative -top-6 md:-top-12 bg-secondary rounded-full flex items-center gap-4 justify-center w-fit mx-auto py-1 md:py-3 px-4 md:text-sm z-50">
+        <p className="text-white text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-center font-normal">
           <span className="font-bold">
             Contiene un gel de glicerina en grado médico
           </span>{" "}
@@ -120,13 +123,13 @@ function ManWithGorrito() {
 function WomanWithGorrito() {
   return (
     <div className="relative">
-      <section className="flex relative h-[568px] overflow-visible">
-        <div className="flex flex-col w-full pl-8 sm:pl-12 md:pl-28 my-auto space-y-2 z-10">
+      <section className="flex relative h-[568px] overflow-hidden">
+        <div className="text-center sm:text-left flex flex-col w-full pl-8 sm:pl-12 md:pl-20 lg:pl-36 xl:pl-40 min-[1350px]:pl-56 2xl:pl-80 my-auto space-y-2 z-10">
           <p className="text-primary text-2xl">Decirle adiós a la migraña...</p>
-          <p className="text-[#5fb9d1] text-xl sm:text-2xl md:text-4xl font-bold">
+          <p className="text-[#5fb9d1] text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold">
             ¡Nunca fue tan fácil!
           </p>
-          <div className="pl-4 sm:pl-8 md:pl-16 space-y-4 pt-6">
+          <div className="mx-auto sm:mx-0 pl-0 sm:pl-8 md:pl-16 space-y-4 pt-6">
             <div className="flex items-center gap-x-4">
               <p className="text-6xl font-bold text-secondary">1</p>
               <p className="text-sx sm:text-sm md:text-base">
@@ -152,14 +155,16 @@ function WomanWithGorrito() {
                 quieras
               </p>
             </div>
-            <GoToGorrito2 />
+            <div className="mt-2">
+              <GoToGorrito2 />
+            </div>
           </div>
         </div>
-        <div className="absolute w-[500px] h-[600px] right-12 -top-8">
+        <div className="absolute w-[500px] h-[600px] right-12 sm:-right-20 md:-right-16 lg:right-16 xl:right-32 min-[1350px]:right-40 2xl:right-56 -top-8">
           <Image
             src="/girl2.png"
             alt="Girl with betterment"
-            className="hidden md:block object-cover"
+            className="hidden sm:block object-cover"
             fill
             priority
           />
@@ -207,7 +212,7 @@ async function GorritoPrice() {
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="flex flex-col md:flex-row justify-between items-center">
+            <CardFooter className="flex flex-col lg:flex-row justify-between items-center">
               <div className="flex items-center gap-x-4 text-primary text-lg">
                 <p className="line-through">S/. 99.90</p>
                 <p className="font-bold">
@@ -328,184 +333,68 @@ async function GorritoPrice() {
       </div>
     </section>
   );
-  // return (
-  //   <section className="bg-low-primary grid grid-cols-1 sm:grid-cols-2 place-items-stretch gap-6 py-24 px-32">
-  //     <div className="grid grid-cols-6 gap-4">
-  //       <div className="col-span-2 flex flex-col gap-4 w-full">
-  //         <Image
-  //           src="/girl_gorrito_special.png"
-  //           alt="Girl with gorrito betterment"
-  //           className="rounded-xl w-full h-[30%]"
-  //           width={100}
-  //           height={100}
-  //         />
-  //         <Image
-  //           src="/girl_gorrito2.png"
-  //           alt="Girl with gorrito betterment 2"
-  //           className="rounded-xl w-full h-[30%]"
-  //           width={100}
-  //           height={100}
-  //         />
-  //         <Image
-  //           src="/girl_gorrito.png"
-  //           alt="Girl with gorrito betterment"
-  //           className="rounded-xl w-full h-[30%]"
-  //           width={100}
-  //           height={100}
-  //         />
-  //       </div>
-  //       <div className="col-span-4">
-  //         <Image
-  //           src="/man_gorrito.png"
-  //           alt="Man with gorrito betterment 2"
-  //           className="rounded-xl w-full h-[80%]"
-  //           width={100}
-  //           height={100}
-  //         />
-  //       </div>
-  //     </div>
-  //     <div className="flex flex-col w-full">
-  //       <Card className="w-[400px]">
-  //         <CardHeader>
-  //           <CardTitle className="text-3xl text-primary pt-1.5 font-bold">
-  //             Gorrito Anti-Migrañas
-  //           </CardTitle>
-  //         </CardHeader>
-  //         <CardContent className="text-primary">
-  //           <div className="flex flex-col gap-2 text-sm">
-  //             <div className="flex items-center gap-x-2">
-  //               <CheckCircle2 className="size-5 fill-primary stroke-white" />
-  //               <p>Alivia dolores de cabeza y migrañas</p>
-  //             </div>
-  //             <div className="flex items-center gap-x-2">
-  //               <CheckCircle2 className="size-5 fill-primary stroke-white" />
-  //               <p>Reduce estrés y tensión muscular</p>
-  //             </div>
-  //             <div className="flex items-center gap-x-2">
-  //               <CheckCircle2 className="size-5 fill-primary stroke-white" />
-  //               <p>Ayuda a conciliar el sueño</p>
-  //             </div>
-  //           </div>
-  //         </CardContent>
-  //         <CardFooter className="flex justify-between">
-  //           <div className="flex items-center gap-x-4 text-primary text-lg">
-  //             <p className="line-through">S/. 99.90</p>
-  //             <p className="font-bold">S/. 79.90</p>
-  //           </div>
-  //           <Button
-  //             variant="secondary"
-  //             className="text-center text-white text-lg font-semibold rounded-full w-36"
-  //           >
-  //             Comprar
-  //           </Button>
-  //         </CardFooter>
-  //       </Card>
-  //       <Accordion
-  //         type="single"
-  //         collapsible
-  //         className="w-[350px] px-8 text-white"
-  //       >
-  //         <AccordionItem value="item-1">
-  //           <AccordionTrigger>Descripción</AccordionTrigger>
-  //           <AccordionContent className="text-xs">
-  //             Migrañas? Dolores de cabeza? Tensión? El Gorrito Antimigrañas está
-  //             diseñado para liberarte de estos males y brindarte el alivio que
-  //             necesitas. Usándolo frío, es altamente efectivo para aliviar
-  //             migrañas y dolores de cabeza, además de ayudarte a relajarte
-  //             profundamente. Su diseño ergonómico se ajusta cómodamente a tu
-  //             cabeza, ofreciendo una cobertura 360° que abarca hasta los ojos.
-  //             Bloquea por completo la luz y aplica una presión ligera, ideal
-  //             para aliviar tensiones. Y sí… ¡puedes usarlo como antifaz para
-  //             dormir con más frescura y comodidad!
-  //             <br /> Si prefieres, también puedes usarlo como una compresa.
-  //             Caliente, es ideal para aliviar cólicos menstruales, dolores
-  //             estomacales, molestias en la espalda o el cuello. También mejora
-  //             el flujo sanguíneo, reduce la rigidez articular y calma los
-  //             espasmos musculares, proporcionando un alivio cálido y
-  //             reconfortante. Fría, reduce la inflamación y alivia el dolor en
-  //             casos de golpes o lesiones, acelerando la recuperación muscular.
-  //             <br />
-  //             Incluye una bolsa hermética protectora e instrucciones de uso.
-  //           </AccordionContent>
-  //         </AccordionItem>
-  //         <AccordionItem value="item-2">
-  //           <AccordionTrigger>Materiales</AccordionTrigger>
-  //           <AccordionContent>
-  //             <ul>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-10" />
-  //                 Gel de glicerina con grado médico, apto para terapias de frío
-  //                 y calor.
-  //               </li>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-10" />
-  //                 Funda de licra y nylon, suave, cómoda y protectora para la
-  //                 piel.
-  //               </li>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-10" />
-  //                 Composición elástica y suave en todo momento (no se pondrá
-  //                 rígido)
-  //               </li>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-6" />
-  //                 No condensa (no te mojará)
-  //               </li>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-10" />
-  //                 No tóxico y sin olor (seguro y sencillo de usar)
-  //               </li>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-10" />
-  //                 Mantiene el frío hasta por 30 minutos (¡máxima relajación!)
-  //               </li>
-  //             </ul>
-  //           </AccordionContent>
-  //         </AccordionItem>
-  //         <AccordionItem value="item-3">
-  //           <AccordionTrigger>Instrucciones de uso</AccordionTrigger>
-  //           <AccordionContent>
-  //             <ul>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-10" />
-  //                 Para enfriar, coloca el gorrito dentro de la bolsa hermética
-  //                 cerrada y déjalo en el congelador por al menos 1-2 horas.
-  //                 <br /> Si lo deseas, puedes dejarlo ahí permanentemente.
-  //               </li>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-10" />
-  //                 Para calentar, retira el gorrito de la bolsa hermética y
-  //                 colócalo en un plato. <br />
-  //                 Calienta en el microondas en intervalos de 1 minuto hasta
-  //                 alcanzar la temperatura deseada.
-  //               </li>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-10" />
-  //                 Para limpiar, nunca sumerjas el gorrito en agua. Usa un paño
-  //                 húmedo o una toalla para limpiarlo.
-  //               </li>
-  //               <li className="flex items-start gap-x-2">
-  //                 <Dot className="size-10" />
-  //                 Si el gorrito se corta y el gel queda expuesto, deja de usarlo
-  //                 y contáctanos para asistencia.
-  //               </li>
-  //             </ul>
-  //           </AccordionContent>
-  //         </AccordionItem>
-  //         <AccordionItem value="item-4">
-  //           <AccordionTrigger>Envío y entrega</AccordionTrigger>
-  //           <AccordionContent>
-  //             Todos los envíos se realizan al día siguiente o hasta 48 horas
-  //             después. Si es a provincia, se dejará en engancha en este rango.
-  //             Nosotros te contactaremos minutos después de tu compra para
-  //             coordinar contigo el envío, queremos asegurarnos de que tu paquete
-  //             llegue sano y salvo!
-  //           </AccordionContent>
-  //         </AccordionItem>
-  //       </Accordion>
-  //     </div>
-  //   </section>
-  // );
+}
+
+async function AccesorioPrice() {
+  return (
+    <section
+      id="gorrito_accesorio"
+      className="bg-low-white h-full sm:h-[512px] pt-12 px-4 md:px-8 lg:px-16 relative overflow-hidden"
+    >
+      <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8">
+        {/* Product Info Section */}
+        <div className="flex flex-col gap-6 z-10 relative sm:text-center md:text-left xl:text-center">
+          <Badge className="sm:mx-auto md:mx-0 xl:mx-auto w-fit rounded-sm text-white italic text-base">
+            Nuevo
+          </Badge>
+          <h1 className="text-secondary text-4xl font-bold">
+            Diseñado para ti
+          </h1>
+          <Card className="w-full sm:mx-auto md:mx-0 xl:mx-auto md:w-[400px] lg:w-[500px] max-w-lg bg-low-primary mb-10">
+            <CardHeader>
+              <CardTitle className="text-3xl text-white font-bold">
+                Cinturón Accesorio
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-white">
+              <div className="flex flex-col gap-2 text-sm sm:text-base">
+                <div className="flex items-center gap-x-2">
+                  <CheckCircle2 className="size-5 fill-white stroke-low-primary" />
+                  <p>Alivia cólicos menstruales</p>
+                </div>
+                <div className="flex items-center gap-x-2">
+                  <CheckCircle2 className="size-5 fill-white stroke-low-primary" />
+                  <p>Ideal para dolor abdominal lumbar</p>
+                </div>
+                <div className="flex items-center gap-x-2">
+                  <CheckCircle2 className="size-5 fill-white stroke-low-primary" />
+                  <p>Ajuste a tu medida</p>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="flex flex-col sm:flex-row justify-center gap-4 items-center">
+              <Button className="text-white text-xs sm:text-base md:text-lg font-semibold rounded-full px-4">
+                <Link href="https://wa.link/94d9qp" target="_blank">
+                  Ver vídeo
+                </Link>
+              </Button>
+              <AddToCart />
+            </CardFooter>
+          </Card>
+        </div>
+        {/* Image positioned absolutely and hidden on mobile */}
+        <div className="hidden md:block xl:hidden absolute top-0 right-0 md:-right-20 lg:-right-10 xl:right-0">
+          <Image
+            src="/cinturon.png"
+            alt="Accesorio"
+            className="md:w-[650px] md:h-[512px] object-cover"
+            width={500}
+            height={500}
+          />
+        </div>
+      </div>
+    </section>
+  );
 }
 
 // function ColdTherapy() {
@@ -666,8 +555,123 @@ export async function MainInformation() {
       <p className="text-center text-primary text-4xl font-bold">
         Tu Gorrito Anti-Migrañas
       </p>
-      <div className="flex flex-col sm:flex-row justify-center gap-x-8 gap-y-4 md:gap-x-14 my-10 px-2">
-        <Card className="bg-primary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
+
+      <div className="hidden sm:block">
+        <div className="grid sm:grid-cols-7 md:grid-cols-5">
+          <div className="sm:col-start-2 sm:col-span-5 md:col-start-2 md:col-span-3 flex justify-center gap-4 my-10 px-2">
+            <Card className="bg-low-primary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
+              <CardHeader>
+                <CardTitle className="text-center">Crioterapia</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-xs md:text-base">
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Snowflake className="size-6" />
+                  <p>
+                    Alivia{" "}
+                    <span className="font-semibold">
+                      dolores de cabeza, <br />
+                      migrañas y fiebre
+                    </span>
+                  </p>
+                </div>
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Snowflake className="size-6" />
+                  <p>
+                    <span className="font-semibold">
+                      Aliviar el estrés y la tensión
+                    </span>
+                    <br />
+                    acumulada
+                  </p>
+                </div>
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Snowflake className="size-6" />
+                  <p>
+                    Reduce la{" "}
+                    <span className="font-semibold">inflamación local</span>
+                    <br /> y alivia el{" "}
+                    <span className="font-semibold">
+                      dolor de un golpe
+                    </span>{" "}
+                    <br /> o lesión
+                  </p>
+                </div>
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Snowflake className="size-6" />
+                  <p>
+                    Acelera la{" "}
+                    <span className="font-semibold">
+                      recuperación <br />
+                      muscular
+                    </span>
+                  </p>
+                </div>
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Snowflake className="size-6" />
+                  <p>
+                    <span className="font-semibold">Mejora tu circulación</span>{" "}
+                    para <br />
+                    sentirte con más energía
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="bg-secondary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
+              <CardHeader>
+                <CardTitle className="text-center">Termoterapia</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-xs md:text-base">
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Flame className="size-6" />
+                  <p>
+                    Alivia{" "}
+                    <span className="font-semibold">
+                      cólicos menstruales,
+                      <br /> estomacales y dolor lumbar
+                    </span>
+                  </p>
+                </div>
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Flame className="size-6" />
+                  <p>
+                    Alivia{" "}
+                    <span className="font-semibold">dolores crónicos</span> de{" "}
+                    <br />{" "}
+                    <span className="font-semibold">espalda o cuello</span>
+                  </p>
+                </div>
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Flame className="size-6" />
+                  <p>
+                    Aumenta el{" "}
+                    <span className="font-semibold">flujo sanguíneo</span>
+                  </p>
+                </div>
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Flame className="size-6" />
+                  <p>
+                    Disminuye la{" "}
+                    <span className="font-semibold">rigidez articular</span>{" "}
+                  </p>
+                </div>
+                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
+                  <Flame className="size-6" />
+                  <p>
+                    Alivia el dolor de{" "}
+                    <span className="font-semibold">
+                      espasmos <br />
+                      musculares
+                    </span>
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col sm:hidden gap-y-4 my-10 px-2">
+        <Card className="bg-low-primary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
           <CardHeader>
             <CardTitle className="text-center">Crioterapia</CardTitle>
           </CardHeader>
@@ -773,9 +777,11 @@ export async function MainInformation() {
           </CardContent>
         </Card>
       </div>
+
       <ManWithGorrito />
       <WomanWithGorrito />
       <GorritoPrice />
+      <AccesorioPrice />
       {/* <div className="bg-[#c8e9eb] w-full h-5" />
       <ColdTherapy />
       <div className="bg-[#c8e9eb] w-full h-5" />

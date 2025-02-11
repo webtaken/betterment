@@ -1,6 +1,7 @@
 "use client";
 
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
+import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 const videos = [
   {
@@ -27,15 +28,33 @@ const videos = [
 
 export function VideoReviews() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-y-8 justify-items-center my-4">
-      {videos.map((video) => (
-        <HeroVideoDialog
-          key={video.url}
-          videoSrc={video.url}
-          thumbnailSrc={video.thumbnail}
-          className="w-[150px] h-[250px]"
-        />
-      ))}
-    </div>
+    <>
+      <div className="hidden sm:block">
+        <div className="flex items-center justify-center gap-4 my-4">
+          {videos.map((video) => (
+            <HeroVideoDialog
+              key={video.url}
+              videoSrc={video.url}
+              thumbnailSrc={video.thumbnail}
+              className="w-[150px] h-[250px]"
+            />
+          ))}
+        </div>
+      </div>
+
+      <ScrollArea className="sm:hidden w-[80%] whitespace-nowrap rounded-md mx-auto">
+        <div className="flex items-center justify-center gap-4 my-4">
+          {videos.map((video) => (
+            <HeroVideoDialog
+              key={video.url}
+              videoSrc={video.url}
+              thumbnailSrc={video.thumbnail}
+              className="w-[150px] h-[250px]"
+            />
+          ))}
+        </div>
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
+    </>
   );
 }
