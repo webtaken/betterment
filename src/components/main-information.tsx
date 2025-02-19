@@ -26,7 +26,7 @@ import Image from "next/image";
 // import { fetchGorritoInformation } from "@/lib/actions/shopify";
 // import { ShopifyProduct } from "@/data/types";
 import { AddToCart } from "./add-to-cart";
-import { GoToGorrito2, GoToGorrito3 } from "./go-to-gorrito";
+import { GoToGorrito2 } from "./go-to-gorrito";
 import { Carousel } from "./carousel";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -40,8 +40,17 @@ function ManWithGorrito() {
           Respaldado por la ciencia
         </p>
       </div>
-      <section className="flex relative h-[500px] md:h-[650px] bg-primary overflow-hidden">
-        <div className="absolute w-[500px] md:w-[730px] h-[700px] -top-2 -left-64 min-[1048px]:-left-36 lg:-left-48 xl:-left-3.5 2xl:-left-[-8%]">
+      <section className="flex flex-col md:flex-row relative md:h-[650px] bg-primary overflow-hidden">
+        <div className="block md:hidden mx-auto my-4 px-4 sm:px-8">
+          <Image
+            src="/man_2.png"
+            alt="Man with betterment"
+            className="md:hidden object-cover rounded-xl"
+            width={500}
+            height={500}
+          />
+        </div>
+        <div className="absolute w-[500px] md:w-[730px] h-[700px] -left-64 min-[1048px]:-left-36 lg:-left-48 xl:-left-3.5 2xl:-left-[-8%]">
           <Image
             src="/man.png"
             alt="Man with betterment"
@@ -50,23 +59,25 @@ function ManWithGorrito() {
             priority
           />
         </div>
-        <div className="flex flex-col w-full pl-12 pr-8 md:pl-[55%] md:pr-16 my-auto z-10">
-          <p className="text-white">Gorrito Anti-migrañas Betterment</p>
-          <p className="text-white text-xl md:text-3xl font-bold">
+        <div className="flex flex-col w-full pl-12 pr-8 md:pl-[55%] md:pr-16 text-center md:text-left my-auto z-10">
+          <p className="text-white text-base md:text-lg">
+            Gorrito Anti-migrañas Betterment
+          </p>
+          <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold">
             Una alternativa de <br /> calidad para combatir <br /> el estrés en
             el Perú
           </p>
-          <div className="my-6 space-y-2 text-xs md:text-sm">
+          <div className="my-6 space-y-2 text-sm sm:text-base md:text-lg mx-auto md:mx-0">
             <div className="grid grid-cols-2">
               <div className="flex items-center gap-x-2">
-                <Rotate3D className="stroke-white" />
+                <Rotate3D className="stroke-white size-6 md:size-8" />
                 <p className="text-white">
                   Cobertura total <br />
                   360° de cabeza
                 </p>
               </div>
               <div className="flex items-center gap-x-2">
-                <Spline className="stroke-white" />
+                <Spline className="stroke-white size-6 md:size-8" />
                 <p className="text-white">
                   Material flexible <br />
                   incluso al congelar
@@ -75,24 +86,24 @@ function ManWithGorrito() {
             </div>
             <div className="grid grid-cols-2">
               <div className="flex items-center gap-x-2">
-                <X className="stroke-white" />
+                <X className="stroke-white size-6 md:size-8" />
                 <p className="text-white">No tóxico y sin olor</p>
               </div>
               <div className="flex items-center gap-x-2">
-                <Cloudy className="stroke-white" />
+                <Cloudy className="stroke-white size-6 md:size-8" />
                 <p className="text-white">No condensa</p>
               </div>
             </div>
             <div className="grid grid-cols-2">
               <div className="flex items-center gap-x-2">
-                <Snowflake className="stroke-white" />
+                <Snowflake className="stroke-white size-6 md:size-8" />
                 <p className="text-white">
                   Mantiene el frío por <br />
                   más tiempo
                 </p>
               </div>
               <div className="flex items-center gap-x-2">
-                <ThermometerSun className="stroke-white" />
+                <ThermometerSun className="stroke-white size-6 md:size-8" />
                 <p className="text-white">
                   Apto para terapia de
                   <br /> frío y de hipertermia
@@ -100,12 +111,12 @@ function ManWithGorrito() {
               </div>
             </div>
           </div>
-          <div className="flex justify-end">
+          {/* <div className="flex justify-end">
             <GoToGorrito3 />
-          </div>
+          </div> */}
         </div>
       </section>
-      <div className="relative -top-6 md:-top-12 bg-secondary rounded-full flex items-center gap-4 justify-center w-fit mx-auto py-1 md:py-3 px-4 md:text-sm z-50">
+      {/* <div className="relative -top-6 md:-top-12 bg-secondary rounded-full flex items-center gap-4 justify-center w-fit mx-auto py-1 md:py-3 px-4 md:text-sm z-50">
         <p className="text-white text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-center font-normal">
           <span className="font-bold">
             Contiene un gel de glicerina en grado médico
@@ -115,7 +126,7 @@ function ManWithGorrito() {
           <span className="font-bold">Forrado con licra y nylon</span>, para
           mayor comodidad y facilidad de limpieza
         </p>
-      </div>
+      </div> */}
     </>
   );
 }
@@ -123,8 +134,15 @@ function ManWithGorrito() {
 function WomanWithGorrito() {
   return (
     <div className="relative">
-      <section className="flex relative h-[568px] overflow-hidden">
-        <div className="text-center sm:text-left flex flex-col w-full pl-8 sm:pl-12 md:pl-20 lg:pl-36 xl:pl-40 min-[1350px]:pl-56 2xl:pl-80 my-auto space-y-2 z-10">
+      <section className="flex flex-col sm:flex-row relative overflow-hidden">
+        <Image
+          src="/girl2.png"
+          alt="Girl with gorrito"
+          className="sm:hidden object-cover mx-auto"
+          width={500}
+          height={500}
+        />
+        <div className="text-center sm:text-left flex flex-col w-full pl-8 sm:pl-12 md:pl-20 lg:pl-36 xl:pl-40 min-[1350px]:pl-56 2xl:pl-80 my-10 space-y-2 z-10">
           <p className="text-primary text-2xl">Decirle adiós a la migraña...</p>
           <p className="text-[#5fb9d1] text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold">
             ¡Nunca fue tan fácil!
@@ -155,9 +173,7 @@ function WomanWithGorrito() {
                 quieras
               </p>
             </div>
-            <div className="mt-2">
-              <GoToGorrito2 />
-            </div>
+            <GoToGorrito2 className="my-4" />
           </div>
         </div>
         <div className="absolute w-[500px] h-[600px] right-12 sm:-right-20 md:-right-16 lg:right-16 xl:right-32 min-[1350px]:right-40 2xl:right-56 -top-8">
@@ -339,9 +355,16 @@ async function AccesorioPrice() {
   return (
     <section
       id="gorrito_accesorio"
-      className="bg-low-white h-full sm:h-[512px] pt-12 px-4 md:px-8 lg:px-16 relative overflow-hidden"
+      className="bg-low-white h-full pt-4 sm:pt-12 px-4 md:px-8 lg:px-16 relative overflow-hidden"
     >
-      <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8">
+      <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8 justify-items-center">
+        <Image
+          src="/cinturon.png"
+          alt="Cinturón Accesorio"
+          width={500}
+          height={500}
+          className="object-cover md:hidden w-[600px] rounded-lg"
+        />
         {/* Product Info Section */}
         <div className="flex flex-col gap-6 z-10 relative sm:text-center md:text-left xl:text-center">
           <Badge className="sm:mx-auto md:mx-0 xl:mx-auto w-fit rounded-sm text-white italic text-base">
@@ -350,7 +373,7 @@ async function AccesorioPrice() {
           <h1 className="text-secondary text-4xl font-bold">
             Diseñado para ti
           </h1>
-          <Card className="w-full sm:mx-auto md:mx-0 xl:mx-auto md:w-[400px] lg:w-[500px] max-w-lg bg-low-primary mb-10">
+          <Card className="w-[350px] sm:w-[400px] md:w-[400px] lg:w-[500px] mx-auto sm:mx-auto md:mx-0 xl:mx-auto bg-low-primary mb-10">
             <CardHeader>
               <CardTitle className="text-3xl text-white font-bold">
                 Cinturón Accesorio
@@ -557,9 +580,9 @@ export async function MainInformation() {
       </p>
 
       <div className="hidden sm:block">
-        <div className="grid sm:grid-cols-7 md:grid-cols-5">
-          <div className="sm:col-start-2 sm:col-span-5 md:col-start-2 md:col-span-3 flex justify-center gap-4 my-10 px-2">
-            <Card className="bg-low-primary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
+        <div className="grid sm:grid-cols-10">
+          <div className="sm:col-start-2 sm:col-span-8 flex justify-center gap-4 my-10 px-2">
+            <Card className="bg-low-primary text-white w-[250px] sm:w-[350px] md:w-[450px] mx-auto lg:mx-0 rounded-3xl">
               <CardHeader>
                 <CardTitle className="text-center">Crioterapia</CardTitle>
               </CardHeader>
@@ -616,7 +639,7 @@ export async function MainInformation() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-secondary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
+            <Card className="bg-secondary text-white w-[250px] sm:w-[350px] md:w-[450px] mx-auto lg:mx-0 rounded-3xl">
               <CardHeader>
                 <CardTitle className="text-center">Termoterapia</CardTitle>
               </CardHeader>

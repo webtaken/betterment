@@ -7,10 +7,10 @@ export async function Testimonials() {
   return (
     <div className="bg-low-white">
       <div className="bg-low-primary relative -top-16 pb-10">
-        <p className="text-center text-white text-xl md:text-2xl pt-16 font-bold px-4">
+        <p className="text-center text-white text-xl md:text-3xl pt-4 mb-8 font-bold px-4">
           Más de 25 000 opiniones positivas
         </p>
-        <div className="hidden sm:block w-[95%] md:w-[90%] mx-auto">
+        <div className="hidden sm:block w-[95%] sm:w-[80%] md:w-[80%] mx-auto">
           <ScrollArea className="w-full bg-white rounded-2xl">
             <div className="flex items-start py-3 px-4">
               {reviews.map((review) => (
@@ -40,7 +40,7 @@ export async function Testimonials() {
             <ScrollBar />
           </ScrollArea>
         </div>
-        <p className="text-center italic text-white text-2xl md:text-3xl font-bold mt-4 px-4">
+        <p className="text-center italic text-white text-2xl md:text-3xl font-bold mt-12 px-4">
           Clientes felices y libres de migraña
         </p>
         <VideoReviews />

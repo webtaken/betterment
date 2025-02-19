@@ -11,7 +11,7 @@ export function AddToCart() {
   return (
     <Button
       variant="secondary"
-      className="text-white text-xs sm:text-sm md:text-base font-semibold rounded-full px-4"
+      className="text-white text-lg font-semibold rounded-full px-4"
       // onClick={() => {
       //   // increase();
       //   // toast.success("Producto agregado al carrito");

@@ -18,11 +18,11 @@ export function GoToGorrito1() {
   );
 }
 
-export function GoToGorrito2() {
+export function GoToGorrito2({ className }: { className?: string }) {
   return (
     <ScrollLink to={"gorrito"} spy={true} smooth={true} duration={800}>
       <Button
-        className="text-center text-white font-semibold rounded-2xl w-40"
+        className={`${className} text-center text-white font-semibold rounded-2xl w-40`}
         variant="default"
       >
         ¡LO QUIERO!
