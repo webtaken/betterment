@@ -27,7 +27,7 @@ import Image from "next/image";
 // import { ShopifyProduct } from "@/data/types";
 import { AddToCart } from "./add-to-cart";
 import { GoToGorrito2 } from "./go-to-gorrito";
-import { Carousel } from "./carousel";
+import { CarouselImages } from "./carousel-images";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import Link from "next/link";
@@ -142,23 +142,27 @@ function WomanWithGorrito() {
           width={500}
           height={500}
         />
-        <div className="text-center sm:text-left flex flex-col w-full pl-8 sm:pl-12 md:pl-20 lg:pl-36 xl:pl-40 min-[1350px]:pl-56 2xl:pl-80 my-10 space-y-2 z-10">
+        <div className="text-center sm:text-left flex flex-col w-full sm:pl-12 md:pl-20 lg:pl-36 xl:pl-40 min-[1350px]:pl-56 2xl:pl-80 my-10 space-y-2 z-10">
           <p className="text-primary text-2xl">Decirle adiós a la migraña...</p>
           <p className="text-[#5fb9d1] text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold">
             ¡Nunca fue tan fácil!
           </p>
           <div className="mx-auto sm:mx-0 pl-0 sm:pl-8 md:pl-16 space-y-4 pt-6">
-            <div className="flex items-center gap-x-4">
-              <p className="text-6xl font-bold text-secondary">1</p>
-              <p className="text-sx sm:text-sm md:text-base">
+            <div className="flex items-center justify-center sm:justify-normal gap-x-2 sm:gap-x-4">
+              <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
+                1
+              </p>
+              <p className="sm:text-sm md:text-base">
                 Colócalo al menos 1-2 horas en el <br />
                 <span className="font-semibold">congelador</span>, dentro de su
                 bolsa plástica
                 <br /> cerrada
               </p>
             </div>
-            <div className="flex items-center gap-x-4">
-              <p className="text-6xl font-bold text-secondary">2</p>
+            <div className="flex items-center justify-center sm:justify-normal gap-x-2 sm:gap-x-4">
+              <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
+                2
+              </p>
               <p className="text-sx sm:text-sm md:text-base">
                 <span className="font-semibold">
                   Ponte tu gorrito hasta cubrir los ojos
@@ -166,8 +170,10 @@ function WomanWithGorrito() {
                 y<br /> relájate, ¡Te quitará la migraña en 30 <br /> minutos
               </p>
             </div>
-            <div className="flex items-center gap-x-4">
-              <p className="text-6xl font-bold text-secondary">3</p>
+            <div className="flex items-center justify-center sm:justify-normal gap-x-2 sm:gap-x-4">
+              <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
+                3
+              </p>
               <p className="text-sx sm:text-sm md:text-base text-secondary font-semibold">
                 ¡Repite! Puedes usar tu gorrito todas las <br /> veces que
                 quieras
@@ -200,14 +206,15 @@ async function GorritoPrice() {
       id="gorrito"
       className="bg-low-primary pt-12 px-4 md:px-8 lg:px-16"
     >
-      <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Carousel />
+      <div className="mx-auto lg:mx-0 w-full flex flex-col md:flex-row justify-center gap-8">
+        <div className="mx-auto items-center mb-4 lg:mb-8">
+          <CarouselImages />
+        </div>
 
-        {/* Product Info Section */}
-        <div className="flex flex-col gap-6">
-          <Card className="w-full max-w-lg">
+        <div className="mx-auto lg:mx-0 flex flex-col gap-6">
+          <Card className="w-full">
             <CardHeader>
-              <CardTitle className="text-3xl text-primary font-bold">
+              <CardTitle className="text-2xl sm:text-4xl md:text-3xl text-primary font-bold">
                 {/* product.title */}
                 Gorrito Anti-Migrañas
               </CardTitle>
@@ -245,7 +252,7 @@ async function GorritoPrice() {
           <Accordion
             type="single"
             collapsible
-            className="w-full mb-4 sm:w-[350px] px-8 text-white"
+            className="w-full mx-auto mb-4 sm:w-[400px] px-8 text-white"
           >
             <AccordionItem value="item-1">
               <AccordionTrigger>Descripción</AccordionTrigger>
@@ -582,7 +589,7 @@ export async function MainInformation() {
       <div className="hidden sm:block">
         <div className="grid sm:grid-cols-10">
           <div className="sm:col-start-2 sm:col-span-8 flex justify-center gap-4 my-10 px-2">
-            <Card className="bg-low-primary text-white w-[250px] sm:w-[350px] md:w-[450px] mx-auto lg:mx-0 rounded-3xl">
+            <Card className="bg-low-primary text-white w-[300px] sm:w-[350px] md:w-[450px] mx-auto lg:mx-0 rounded-3xl">
               <CardHeader>
                 <CardTitle className="text-center">Crioterapia</CardTitle>
               </CardHeader>
@@ -639,7 +646,7 @@ export async function MainInformation() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-secondary text-white w-[250px] sm:w-[350px] md:w-[450px] mx-auto lg:mx-0 rounded-3xl">
+            <Card className="bg-secondary text-white w-[300px] sm:w-[350px] md:w-[450px] mx-auto lg:mx-0 rounded-3xl">
               <CardHeader>
                 <CardTitle className="text-center">Termoterapia</CardTitle>
               </CardHeader>
@@ -694,7 +701,7 @@ export async function MainInformation() {
       </div>
 
       <div className="flex flex-col sm:hidden gap-y-4 my-10 px-2">
-        <Card className="bg-low-primary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
+        <Card className="bg-low-primary text-white w-[300px] sm:w-[350px] mx-auto rounded-3xl">
           <CardHeader>
             <CardTitle className="text-center">Crioterapia</CardTitle>
           </CardHeader>
@@ -750,7 +757,7 @@ export async function MainInformation() {
             </div>
           </CardContent>
         </Card>
-        <Card className="bg-secondary text-white w-[250px] sm:w-[350px] mx-auto rounded-3xl">
+        <Card className="bg-secondary text-white w-[300px] sm:w-[350px] mx-auto rounded-3xl">
           <CardHeader>
             <CardTitle className="text-center">Termoterapia</CardTitle>
           </CardHeader>

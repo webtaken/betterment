@@ -6,8 +6,8 @@ export function Hero() {
   return (
     <div className="relative overflow-hidden">
       <div className="grid grid-cols-12">
-        <section className="col-span-12 md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-12 2xl:col-start-2 2xl:col-span-10 flex relative max-[450px]:h-[520px] min-[451px]:h-[550px] min-[535px]:h-[620px] sm:h-[390px] md:h-[540px]">
-          <div className="flex flex-col w-full md:pl-28 sm:my-auto">
+        <section className="col-span-12 md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-12 2xl:col-start-2 2xl:col-span-10 flex relative h-[520px] min-[375px]:h-[550px] min-[450px]:h-[570px] min-[490px]:h-[600px] min-[545px]:h-[640px] min-[610px]:h-[660px] sm:h-[420px] md:h-[540px]">
+          <div className="flex flex-col w-full md:pl-20 lg:pl-28 sm:my-auto">
             <Image
               src="/girl_mobile.png"
               alt="Girl with betterment"
@@ -15,7 +15,7 @@ export function Hero() {
               width={500}
               height={500}
             />
-            <div className="px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            <div className="px-4 mt-2 sm:mt-4 md:mt-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               <p className="text-primary text-center sm:text-left font-bold">
                 Gorrito
               </p>
