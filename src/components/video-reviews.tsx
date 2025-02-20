@@ -30,26 +30,26 @@ export function VideoReviews() {
   return (
     <>
       <div className="hidden sm:block">
-        <div className="flex items-center justify-center gap-4 my-4">
+        <div className="flex w-[80%] items-center justify-center gap-4 my-4 mx-auto">
           {videos.map((video) => (
             <HeroVideoDialog
               key={video.url}
               videoSrc={video.url}
               thumbnailSrc={video.thumbnail}
-              className="w-[150px] h-[250px]"
+              className="w-[calc(100%+2rem)] h-[calc(100%+2rem)]"
             />
           ))}
         </div>
       </div>
 
-      <ScrollArea className="sm:hidden w-[80%] whitespace-nowrap rounded-md mx-auto">
+      <ScrollArea className="sm:hidden w-[85%] whitespace-nowrap rounded-md mx-auto">
         <div className="flex items-center justify-center gap-4 my-4">
           {videos.map((video) => (
             <HeroVideoDialog
               key={video.url}
               videoSrc={video.url}
               thumbnailSrc={video.thumbnail}
-              className="w-[150px] h-[250px]"
+              className="w-[180px] h-[260px]"
             />
           ))}
         </div>

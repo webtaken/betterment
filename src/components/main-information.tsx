@@ -33,15 +33,20 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 
 function ManWithGorrito() {
+  const bulletPointsClass =
+    "flex items-center gap-x-2 w-fit text-wrap text-left p-0 hover:bg-transparent hover:cursor-text select-text h-auto text-base md:text-lg lg:text-xl xl:text-2xl";
+  const iconBulletPointClass = "stroke-white size-9 md:size-12";
+
   return (
-    <>
-      <div className="bg-[#5fb9d1] relative z-50">
+    <section className="bg-primary">
+      <div className="bg-[#5fb9d1] cursor relative cursor z-50">
         <p className="text-center text-white italic text-2xl py-3 font-semibold">
           Respaldado por la ciencia
         </p>
       </div>
-      <section className="flex flex-col md:flex-row relative md:h-[650px] bg-primary overflow-hidden">
-        <div className="block md:hidden mx-auto my-4 px-4 sm:px-8">
+
+      <section className="w-full md:w-[90%] md:mx-auto flex flex-col md:flex-row justify-center items-center md:h-auto py-4 md:py-10 gap-x-4 overflow-hidden">
+        <div className="md:hidden mx-auto my-4 px-12 sm:px-8">
           <Image
             src="/man_2.png"
             alt="Man with betterment"
@@ -50,70 +55,98 @@ function ManWithGorrito() {
             height={500}
           />
         </div>
-        <div className="absolute w-[500px] md:w-[730px] h-[700px] -left-64 min-[1048px]:-left-36 lg:-left-48 xl:-left-3.5 2xl:-left-[-8%]">
+        <div className="w-full">
           <Image
             src="/man.png"
             alt="Man with betterment"
-            className="hidden md:block object-cover rounded-[50%]"
-            fill
-            priority
+            className="hidden md:block mx-auto justify-center object-cover rounded-[50%]"
+            width={500}
+            height={500}
           />
         </div>
-        <div className="flex flex-col w-full pl-12 pr-8 md:pl-[55%] md:pr-16 text-center md:text-left my-auto z-10">
-          <p className="text-white text-base md:text-lg">
-            Gorrito Anti-migrañas Betterment
+        <div className="flex flex-col w-full text-center md:text-left z-10">
+          <p className="text-white text-base md:text-lg lg:text-2xl">
+            Gorrito Anti-Migrañas Betterment
           </p>
-          <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold">
-            Una alternativa de <br /> calidad para combatir <br /> el estrés en
-            el Perú
+          <p className="text-white text-xl px-2 sm:px-8 min-[712px]:px-10 md:px-0 sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+            Una alternativa de calidad para combatir el estrés{" "}
+            <br className="hidden" />
+            en el Perú
           </p>
-          <div className="my-6 space-y-2 text-sm sm:text-base md:text-lg mx-auto md:mx-0">
-            <div className="grid grid-cols-2">
-              <div className="flex items-center gap-x-2">
-                <Rotate3D className="stroke-white size-6 md:size-8" />
-                <p className="text-white">
-                  Cobertura total <br />
-                  360° de cabeza
-                </p>
+          <div className="my-6 space-y-2 text-left text-sm sm:text-base md:text-base lg:text-lg mx-12 sm:mx-auto sm:px-8 md:mx-0 md:px-0">
+            <div className="grid grid-cols-2 gap-x-3 gap-y-2">
+              <div className="flex items-center gap-x-2.5">
+                <Rotate3D className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">Cobertura total 360° de cabeza</p>
+                </Button>
               </div>
-              <div className="flex items-center gap-x-2">
-                <Spline className="stroke-white size-6 md:size-8" />
-                <p className="text-white">
-                  Material flexible <br />
-                  incluso al congelar
-                </p>
+              <div className="flex items-center gap-x-2.5">
+                <Spline className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">
+                    Material flexible incluso al congelar
+                  </p>
+                </Button>
+              </div>
+              <div className="flex items-center gap-x-2.5">
+                <X className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">No tóxico y sin olor</p>
+                </Button>
+              </div>
+              <div className="flex items-center gap-x-2.5">
+                <Cloudy className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">No condensa</p>{" "}
+                </Button>
+              </div>
+              <div className="flex items-center gap-x-2.5">
+                <Snowflake className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">Mantiene el frío por más tiempo</p>
+                </Button>
+              </div>
+              <div className="flex items-center gap-x-2.5">
+                <ThermometerSun className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">
+                    Apto para terapia de frío y de hipertermia
+                  </p>
+                </Button>
               </div>
             </div>
-            <div className="grid grid-cols-2">
-              <div className="flex items-center gap-x-2">
-                <X className="stroke-white size-6 md:size-8" />
-                <p className="text-white">No tóxico y sin olor</p>
+            {/* <div className="grid grid-cols-2">
+              <div className="flex items-center gap-x-2.5">
+                <X className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">No tóxico y sin olor</p>
+                </Button>
               </div>
-              <div className="flex items-center gap-x-2">
-                <Cloudy className="stroke-white size-6 md:size-8" />
-                <p className="text-white">No condensa</p>
+              <div className="flex items-center gap-x-2.5">
+                <Cloudy className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">No condensa</p>{" "}
+                </Button>
               </div>
-            </div>
-            <div className="grid grid-cols-2">
-              <div className="flex items-center gap-x-2">
-                <Snowflake className="stroke-white size-6 md:size-8" />
-                <p className="text-white">
-                  Mantiene el frío por <br />
-                  más tiempo
-                </p>
+            </div> */}
+            {/* <div className="grid grid-cols-2">
+              <div className="flex items-center gap-x-2.5">
+                <Snowflake className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">Mantiene el frío por más tiempo</p>
+                </Button>
               </div>
-              <div className="flex items-center gap-x-2">
-                <ThermometerSun className="stroke-white size-6 md:size-8" />
-                <p className="text-white">
-                  Apto para terapia de
-                  <br /> frío y de hipertermia
-                </p>
+              <div className="flex items-center gap-x-2.5">
+                <ThermometerSun className={iconBulletPointClass} />
+                <Button className={bulletPointsClass} variant="ghost">
+                  <p className="text-white">
+                    Apto para terapia de frío y de hipertermia
+                  </p>
+                </Button>
               </div>
-            </div>
+            </div> */}
           </div>
-          {/* <div className="flex justify-end">
-            <GoToGorrito3 />
-          </div> */}
         </div>
       </section>
       {/* <div className="relative -top-6 md:-top-12 bg-secondary rounded-full flex items-center gap-4 justify-center w-fit mx-auto py-1 md:py-3 px-4 md:text-sm z-50">
@@ -127,7 +160,7 @@ function ManWithGorrito() {
           mayor comodidad y facilidad de limpieza
         </p>
       </div> */}
-    </>
+    </section>
   );
 }
 
@@ -142,7 +175,7 @@ function WomanWithGorrito() {
           width={500}
           height={500}
         />
-        <div className="text-center sm:text-left flex flex-col w-full sm:pl-12 md:pl-20 lg:pl-36 xl:pl-40 min-[1350px]:pl-56 2xl:pl-80 my-10 space-y-2 z-10">
+        <div className="text-center sm:text-left flex flex-col w-full sm:pl-12 md:pl-20 lg:pl-36 xl:pl-40 min-[1350px]:pl-56 2xl:pl-80 my-14 space-y-2 z-10">
           <p className="text-primary text-2xl">Decirle adiós a la migraña...</p>
           <p className="text-[#5fb9d1] text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold">
             ¡Nunca fue tan fácil!
@@ -174,7 +207,7 @@ function WomanWithGorrito() {
               <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
                 3
               </p>
-              <p className="text-sx sm:text-sm md:text-base text-secondary font-semibold">
+              <p className="text-sx sm:text-sm md:text-base font-semibold">
                 ¡Repite! Puedes usar tu gorrito todas las <br /> veces que
                 quieras
               </p>
@@ -182,7 +215,7 @@ function WomanWithGorrito() {
             <GoToGorrito2 className="my-4" />
           </div>
         </div>
-        <div className="absolute w-[500px] h-[600px] right-12 sm:-right-20 md:-right-16 lg:right-16 xl:right-32 min-[1350px]:right-40 2xl:right-56 -top-8">
+        <div className="absolute w-[500px] lg:w-[550px] h-[600px] lg:h-[650px] right-12 sm:-right-20 md:-right-16 lg:right-16 xl:right-32 min-[1350px]:right-40 2xl:right-56 top-2">
           <Image
             src="/girl2.png"
             alt="Girl with betterment"
@@ -212,7 +245,7 @@ async function GorritoPrice() {
         </div>
 
         <div className="mx-auto lg:mx-0 flex flex-col gap-6">
-          <Card className="w-full">
+          <Card className="w-full bg-low-white">
             <CardHeader>
               <CardTitle className="text-2xl sm:text-4xl md:text-3xl text-primary font-bold">
                 {/* product.title */}
@@ -252,7 +285,7 @@ async function GorritoPrice() {
           <Accordion
             type="single"
             collapsible
-            className="w-full mx-auto mb-4 sm:w-[400px] px-8 text-white"
+            className="w-full mx-auto md:mx-0 lg:mx-0 mb-4 sm:w-[400px] px-8 text-white"
           >
             <AccordionItem value="item-1">
               <AccordionTrigger>Descripción</AccordionTrigger>
@@ -373,14 +406,14 @@ async function AccesorioPrice() {
           className="object-cover md:hidden w-[600px] rounded-lg"
         />
         {/* Product Info Section */}
-        <div className="flex flex-col gap-6 z-10 relative sm:text-center md:text-left xl:text-center">
-          <Badge className="sm:mx-auto md:mx-0 xl:mx-auto w-fit rounded-sm text-white italic text-base">
+        <div className="flex flex-col gap-6 z-10 relative sm:text-center md:text-left">
+          <Badge className="sm:mx-auto md:mx-0 w-fit rounded-sm text-white italic text-base">
             Nuevo
           </Badge>
           <h1 className="text-secondary text-4xl font-bold">
             Diseñado para ti
           </h1>
-          <Card className="w-[350px] sm:w-[400px] md:w-[400px] lg:w-[500px] mx-auto sm:mx-auto md:mx-0 xl:mx-auto bg-low-primary mb-10">
+          <Card className="w-[350px] sm:w-[400px] md:w-[400px] lg:w-[500px] mx-auto sm:mx-auto md:mx-0 bg-low-primary mb-10">
             <CardHeader>
               <CardTitle className="text-3xl text-white font-bold">
                 Cinturón Accesorio
@@ -413,7 +446,7 @@ async function AccesorioPrice() {
           </Card>
         </div>
         {/* Image positioned absolutely and hidden on mobile */}
-        <div className="hidden md:block xl:hidden absolute top-0 right-0 md:-right-20 lg:-right-10 xl:right-0">
+        <div className="hidden md:block absolute top-0 right-0 md:-right-20 lg:-right-10 xl:right-0">
           <Image
             src="/cinturon.png"
             alt="Accesorio"
@@ -579,16 +612,18 @@ async function AccesorioPrice() {
 export async function MainInformation() {
   return (
     <main className="bg-low-white">
-      <p className="text-center italic text-2xl text-primary">
-        Descubre todos los beneficios de
-      </p>
-      <p className="text-center text-primary text-4xl font-bold">
-        Tu Gorrito Anti-Migrañas
-      </p>
+      <div className="my-6">
+        <p className="text-center italic text-lg md:text-2xl text-primary">
+          Descubre todos los beneficios de
+        </p>
+        <p className="text-center text-primary text-2xl md:text-4xl font-bold">
+          Tu Gorrito Anti-Migrañas
+        </p>
+      </div>
 
       <div className="hidden sm:block">
         <div className="grid sm:grid-cols-10">
-          <div className="sm:col-start-2 sm:col-span-8 flex justify-center gap-4 my-10 px-2">
+          <div className="sm:col-start-2 sm:col-span-8 flex justify-center gap-4 mb-10 px-2">
             <Card className="bg-low-primary text-white w-[300px] sm:w-[350px] md:w-[450px] mx-auto lg:mx-0 rounded-3xl">
               <CardHeader>
                 <CardTitle className="text-center">Crioterapia</CardTitle>
@@ -599,8 +634,7 @@ export async function MainInformation() {
                   <p>
                     Alivia{" "}
                     <span className="font-semibold">
-                      dolores de cabeza, <br />
-                      migrañas y fiebre
+                      dolores de cabeza, migrañas y fiebre
                     </span>
                   </p>
                 </div>
@@ -610,7 +644,6 @@ export async function MainInformation() {
                     <span className="font-semibold">
                       Aliviar el estrés y la tensión
                     </span>
-                    <br />
                     acumulada
                   </p>
                 </div>
@@ -618,30 +651,24 @@ export async function MainInformation() {
                   <Snowflake className="size-6" />
                   <p>
                     Reduce la{" "}
-                    <span className="font-semibold">inflamación local</span>
-                    <br /> y alivia el{" "}
-                    <span className="font-semibold">
-                      dolor de un golpe
-                    </span>{" "}
-                    <br /> o lesión
+                    <span className="font-semibold">inflamación local</span>y
+                    alivia el{" "}
+                    <span className="font-semibold">dolor de un golpe</span> o
+                    lesión
                   </p>
                 </div>
                 <div className="flex gap-x-2 items-start mx-2 md:mx-6">
                   <Snowflake className="size-6" />
                   <p>
                     Acelera la{" "}
-                    <span className="font-semibold">
-                      recuperación <br />
-                      muscular
-                    </span>
+                    <span className="font-semibold">recuperación muscular</span>
                   </p>
                 </div>
                 <div className="flex gap-x-2 items-start mx-2 md:mx-6">
                   <Snowflake className="size-6" />
                   <p>
                     <span className="font-semibold">Mejora tu circulación</span>{" "}
-                    para <br />
-                    sentirte con más energía
+                    para sentirte con más energía
                   </p>
                 </div>
               </CardContent>
@@ -656,8 +683,7 @@ export async function MainInformation() {
                   <p>
                     Alivia{" "}
                     <span className="font-semibold">
-                      cólicos menstruales,
-                      <br /> estomacales y dolor lumbar
+                      cólicos menstruales, estomacales y dolor lumbar
                     </span>
                   </p>
                 </div>
@@ -666,7 +692,6 @@ export async function MainInformation() {
                   <p>
                     Alivia{" "}
                     <span className="font-semibold">dolores crónicos</span> de{" "}
-                    <br />{" "}
                     <span className="font-semibold">espalda o cuello</span>
                   </p>
                 </div>
@@ -688,10 +713,7 @@ export async function MainInformation() {
                   <Flame className="size-6" />
                   <p>
                     Alivia el dolor de{" "}
-                    <span className="font-semibold">
-                      espasmos <br />
-                      musculares
-                    </span>
+                    <span className="font-semibold">espasmos musculares</span>
                   </p>
                 </div>
               </CardContent>
@@ -700,7 +722,7 @@ export async function MainInformation() {
         </div>
       </div>
 
-      <div className="flex flex-col sm:hidden gap-y-4 my-10 px-2">
+      <div className="flex flex-col sm:hidden gap-y-4 mb-10 px-2">
         <Card className="bg-low-primary text-white w-[300px] sm:w-[350px] mx-auto rounded-3xl">
           <CardHeader>
             <CardTitle className="text-center">Crioterapia</CardTitle>
@@ -711,8 +733,7 @@ export async function MainInformation() {
               <p>
                 Alivia{" "}
                 <span className="font-semibold">
-                  dolores de cabeza, <br />
-                  migrañas y fiebre
+                  dolores de cabeza, migrañas y fiebre
                 </span>
               </p>
             </div>

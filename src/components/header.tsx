@@ -30,7 +30,7 @@ export function Header() {
       </section>
       <section className="bg-secondary py-1">
         <p className="text-center text-white text-sm font-semibold">
-          <span className="italic">+25 000 Felices en Amazon</span> 🌟
+          <span className="italic">+25 000 Clientes Felices en Amazon</span> 🌟
         </p>
       </section>
     </header>

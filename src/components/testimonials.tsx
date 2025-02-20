@@ -6,8 +6,8 @@ import { reviews } from "@/data/reviews";
 export async function Testimonials() {
   return (
     <div className="bg-low-white">
-      <div className="bg-low-primary relative -top-16 pb-10">
-        <p className="text-center text-white text-xl md:text-3xl pt-4 mb-8 font-bold px-4">
+      <div className="bg-low-primary pb-10">
+        <p className="text-center text-white text-xl md:text-3xl pt-8 mb-8 font-bold px-4">
           Más de 25 000 opiniones positivas
         </p>
         <div className="hidden sm:block w-[95%] sm:w-[80%] md:w-[80%] mx-auto">
@@ -25,7 +25,7 @@ export async function Testimonials() {
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
         </div>
-        <div className="sm:hidden w-[95%] md:w-[90%] mx-auto">
+        <div className="sm:hidden w-[85%] md:w-[90%] mx-auto">
           <ScrollArea className="w-full bg-white rounded-2xl h-[200px]">
             <div className="grid max-[420px]:grid-cols-2 max-[550px]:grid-cols-3 max-[640px]:grid-cols-3 gap-4 items-start py-3 px-4">
               {reviews.map((review) => (
@@ -40,7 +40,7 @@ export async function Testimonials() {
             <ScrollBar />
           </ScrollArea>
         </div>
-        <p className="text-center italic text-white text-2xl md:text-3xl font-bold mt-12 px-4">
+        <p className="text-center italic text-white text-2xl md:text-3xl font-bold my-10 px-4">
           Clientes felices y libres de migraña
         </p>
         <VideoReviews />
