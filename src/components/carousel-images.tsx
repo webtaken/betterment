@@ -73,7 +73,7 @@ const images: CarouselImage[] = [
 
 export function CarouselImages() {
   return (
-    <Carousel className="w-full max-w-[500px] px-0 sm:px-8">
+    <Carousel className="w-full px-0 sm:px-8">
       <CarouselContent>
         {images.map((img, index) => (
           <CarouselItem key={img.source + index}>

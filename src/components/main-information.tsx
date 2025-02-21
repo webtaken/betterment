@@ -116,50 +116,9 @@ function ManWithGorrito() {
                 </Button>
               </div>
             </div>
-            {/* <div className="grid grid-cols-2">
-              <div className="flex items-center gap-x-2.5">
-                <X className={iconBulletPointClass} />
-                <Button className={bulletPointsClass} variant="ghost">
-                  <p className="text-white">No tóxico y sin olor</p>
-                </Button>
-              </div>
-              <div className="flex items-center gap-x-2.5">
-                <Cloudy className={iconBulletPointClass} />
-                <Button className={bulletPointsClass} variant="ghost">
-                  <p className="text-white">No condensa</p>{" "}
-                </Button>
-              </div>
-            </div> */}
-            {/* <div className="grid grid-cols-2">
-              <div className="flex items-center gap-x-2.5">
-                <Snowflake className={iconBulletPointClass} />
-                <Button className={bulletPointsClass} variant="ghost">
-                  <p className="text-white">Mantiene el frío por más tiempo</p>
-                </Button>
-              </div>
-              <div className="flex items-center gap-x-2.5">
-                <ThermometerSun className={iconBulletPointClass} />
-                <Button className={bulletPointsClass} variant="ghost">
-                  <p className="text-white">
-                    Apto para terapia de frío y de hipertermia
-                  </p>
-                </Button>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
-      {/* <div className="relative -top-6 md:-top-12 bg-secondary rounded-full flex items-center gap-4 justify-center w-fit mx-auto py-1 md:py-3 px-4 md:text-sm z-50">
-        <p className="text-white text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-center font-normal">
-          <span className="font-bold">
-            Contiene un gel de glicerina en grado médico
-          </span>{" "}
-          que resiste altas y bajas temperaturas.
-          <br />
-          <span className="font-bold">Forrado con licra y nylon</span>, para
-          mayor comodidad y facilidad de limpieza
-        </p>
-      </div> */}
     </section>
   );
 }
@@ -239,15 +198,15 @@ async function GorritoPrice() {
       id="gorrito"
       className="bg-low-primary pt-12 px-4 md:px-8 lg:px-16"
     >
-      <div className="mx-auto lg:mx-0 w-full flex flex-col md:flex-row justify-center gap-8">
-        <div className="mx-auto items-center mb-4 lg:mb-8">
+      <div className="w-full mx-auto md:w-[90%] flex flex-col md:flex-row justify-center gap-8">
+        <div className="w-1/2 sm:w-full mx-auto items-center mb-4 lg:mb-8">
           <CarouselImages />
         </div>
 
-        <div className="mx-auto lg:mx-0 flex flex-col gap-6">
+        <div className="w-full md:w-1/2 mx-auto lg:mx-0 flex flex-col gap-6">
           <Card className="w-full bg-low-white">
             <CardHeader>
-              <CardTitle className="text-2xl sm:text-4xl md:text-3xl text-primary font-bold">
+              <CardTitle className="text-2xl sm:text-3xl md:text-2xl text-primary font-bold">
                 {/* product.title */}
                 Gorrito Anti-Migrañas
               </CardTitle>
@@ -285,10 +244,12 @@ async function GorritoPrice() {
           <Accordion
             type="single"
             collapsible
-            className="w-full mx-auto md:mx-0 lg:mx-0 mb-4 sm:w-[400px] px-8 text-white"
+            className="w-full -space-y-2 mx-auto md:mx-0 lg:mx-0 mb-4 px-8 text-white"
           >
             <AccordionItem value="item-1">
-              <AccordionTrigger>Descripción</AccordionTrigger>
+              <AccordionTrigger className="py-2 text-sm">
+                Descripción
+              </AccordionTrigger>
               <AccordionContent className="text-xs">
                 Migrañas? Dolores de cabeza? Tensión? El Gorrito Antimigrañas
                 está diseñado para liberarte de estos males y brindarte el
@@ -311,7 +272,9 @@ async function GorritoPrice() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>Materiales</AccordionTrigger>
+              <AccordionTrigger className="py-2 text-sm">
+                Materiales
+              </AccordionTrigger>
               <AccordionContent>
                 <ul>
                   <li className="flex items-start gap-x-2">
@@ -345,7 +308,9 @@ async function GorritoPrice() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>Instrucciones de uso</AccordionTrigger>
+              <AccordionTrigger className="py-2 text-sm">
+                Instrucciones de uso
+              </AccordionTrigger>
               <AccordionContent>
                 <ul>
                   <li className="flex items-start gap-x-2">
@@ -375,7 +340,9 @@ async function GorritoPrice() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger>Envío y entrega</AccordionTrigger>
+              <AccordionTrigger className="py-2 text-sm">
+                Envío y entrega
+              </AccordionTrigger>
               <AccordionContent>
                 Todos los envíos se realizan al día siguiente o hasta 48 horas
                 después. Si es a provincia, se dejará en engancha en este rango.
@@ -395,25 +362,25 @@ async function AccesorioPrice() {
   return (
     <section
       id="gorrito_accesorio"
-      className="bg-low-white h-full pt-4 sm:pt-12 px-4 md:px-8 lg:px-16 relative overflow-hidden"
+      className="bg-low-white w-full h-full overflow-hidden"
     >
-      <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8 justify-items-center">
+      <div className="flex flex-col min-[900px]:flex-row py-10 px-8 justify-center items-center gap-8">
         <Image
           src="/cinturon.png"
           alt="Cinturón Accesorio"
           width={500}
           height={500}
-          className="object-cover md:hidden w-[600px] rounded-lg"
+          className="object-cover min-[900px]:hidden mx-auto rounded-lg"
         />
         {/* Product Info Section */}
-        <div className="flex flex-col gap-6 z-10 relative sm:text-center md:text-left">
-          <Badge className="sm:mx-auto md:mx-0 w-fit rounded-sm text-white italic text-base">
+        <div className="flex w-full flex-col gap-6 z-10 relative sm:text-center min-[900px]:text-left">
+          <Badge className="sm:mx-auto min-[900px]:mx-0 w-fit rounded-sm text-white italic text-base">
             Nuevo
           </Badge>
           <h1 className="text-secondary text-4xl font-bold">
             Diseñado para ti
           </h1>
-          <Card className="w-[350px] sm:w-[400px] md:w-[400px] lg:w-[500px] mx-auto sm:mx-auto md:mx-0 bg-low-primary mb-10">
+          <Card className="w-full mx-auto sm:mx-auto md:mx-0 bg-low-primary">
             <CardHeader>
               <CardTitle className="text-3xl text-white font-bold">
                 Cinturón Accesorio
@@ -446,15 +413,13 @@ async function AccesorioPrice() {
           </Card>
         </div>
         {/* Image positioned absolutely and hidden on mobile */}
-        <div className="hidden md:block absolute top-0 right-0 md:-right-20 lg:-right-10 xl:right-0">
-          <Image
-            src="/cinturon.png"
-            alt="Accesorio"
-            className="md:w-[650px] md:h-[512px] object-cover"
-            width={500}
-            height={500}
-          />
-        </div>
+        <Image
+          src="/cinturon.png"
+          alt="Accesorio"
+          className="hidden min-[900px]:block w-1/2 mx-auto object-cover"
+          width={500}
+          height={500}
+        />
       </div>
     </section>
   );

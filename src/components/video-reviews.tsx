@@ -1,6 +1,9 @@
 "use client";
 
-import HeroVideoDialog from "@/components/ui/hero-video-dialog";
+import {
+  HeroVideoDialog,
+  HeroVideoDialogMobile,
+} from "@/components/ui/hero-video-dialog";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 const videos = [
@@ -45,7 +48,7 @@ export function VideoReviews() {
       <ScrollArea className="sm:hidden w-[85%] whitespace-nowrap rounded-md mx-auto">
         <div className="flex items-center justify-center gap-4 my-4">
           {videos.map((video) => (
-            <HeroVideoDialog
+            <HeroVideoDialogMobile
               key={video.url}
               videoSrc={video.url}
               thumbnailSrc={video.thumbnail}
