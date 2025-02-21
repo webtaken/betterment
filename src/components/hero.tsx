@@ -4,16 +4,16 @@ import { GoToGorrito1 } from "./go-to-gorrito";
 
 export function Hero() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="overflow-hidden">
       <div className="grid grid-cols-12">
-        <section className="col-span-12 md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-12 2xl:col-start-2 2xl:col-span-10 flex relative h-[500px] min-[375px]:h-[500px] min-[450px]:h-[570px] min-[490px]:h-[600px] min-[545px]:h-[640px] min-[610px]:h-[660px] sm:h-[420px] md:h-[540px]">
+        <section className="col-span-12 md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-12 2xl:col-start-2 2xl:col-span-10 flex relative h-[470px] min-[375px]:h-[500px] min-[450px]:h-[520px] min-[490px]:h-[540px] min-[500px]:h-[560px] min-[535px]:h-[580px] min-[570px]:h-[600px] min-[600px]:h-[600px] min-[610px]:h-[620px] sm:h-[420px] md:h-[540px]">
           <div className="flex flex-col w-full md:pl-20 lg:pl-28 sm:my-auto">
             <Image
               src="/girl_mobile.png"
               alt="Girl with betterment"
-              className="object-cover mx-auto sm:hidden col-span-12 justify-self-center rounded-b-sm"
-              width={500}
-              height={500}
+              className="object-center w-full mx-auto sm:hidden justify-self-center rounded-b-sm"
+              width={700}
+              height={700}
             />
             <div className="px-4 mt-4 sm:mt-4 md:mt-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               <p className="text-primary text-center sm:text-left font-bold">
@@ -22,7 +22,7 @@ export function Hero() {
               <p className="text-[#5fb9d1] text-center sm:text-left font-bold">
                 Anti-Migrañas
               </p>
-              <p className="text-[#545454] text-xs sm:text-sm my-6 px-4 md:px-0">
+              <p className="text-[#545454] text-xs min-[500px]:text-sm sm:text-sm my-6 px-4 md:px-0">
                 Diseñado especialmente para aliviar las consecuencias del estrés{" "}
                 <br className="hidden sm:block" />
                 en tu cuerpo, con la innovadora terapia de frío y calor:{" "}
