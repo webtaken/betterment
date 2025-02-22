@@ -26,11 +26,11 @@ import Image from "next/image";
 // import { ShopifyProduct } from "@/data/types";
 import { AddToCart } from "./add-to-cart";
 import { GoToGorrito2 } from "./go-to-gorrito";
-// import { CarouselImages } from "./carousel-images";
+import { CarouselImages } from "./carousel-images";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { AspectRatio } from "./ui/aspect-ratio";
+// import { AspectRatio } from "./ui/aspect-ratio";
 
 function ManWithGorrito() {
   const bulletPointsClass =
@@ -200,15 +200,15 @@ async function GorritoPrice() {
     >
       <div className="w-full mx-auto md:w-[90%] flex flex-col min-[900px]:flex-row justify-center gap-8">
         <div className="w-full mx-auto items-center mb-4 lg:mb-8">
-          {/* <CarouselImages /> */}
-          <AspectRatio ratio={4 / 3}>
+          <CarouselImages />
+          {/* <AspectRatio ratio={4 / 3}>
             <Image
               src="/man_gorrito.png"
               alt="Man with gorrito betterment"
               fill
               className="object-[25%_25%] object-cover w-full h-full rounded-xl"
             />
-          </AspectRatio>
+          </AspectRatio> */}
         </div>
 
         <div className="w-full min-[900px]:w-1/2 mx-auto lg:mx-0 flex flex-col gap-6">
