@@ -1,7 +1,6 @@
 import {
   CheckCircle2,
   Cloudy,
-  Dot,
   Flame,
   Rotate3D,
   Snowflake,
@@ -197,7 +196,7 @@ async function GorritoPrice() {
   return (
     <section
       id="gorrito"
-      className="bg-low-primary pt-12 px-4 md:px-8 lg:px-16"
+      className="bg-low-primary pt-12 px-8 sm:px-10 md:px-12 lg:px-16"
     >
       <div className="w-full mx-auto md:w-[90%] flex flex-col min-[900px]:flex-row justify-center gap-8">
         <div className="w-full mx-auto items-center mb-4 lg:mb-8">
@@ -259,7 +258,7 @@ async function GorritoPrice() {
               <AccordionTrigger className="py-2 text-sm">
                 Descripción
               </AccordionTrigger>
-              <AccordionContent className="text-xs">
+              <AccordionContent className="text-sm">
                 Migrañas? Dolores de cabeza? Tensión? El Gorrito Antimigrañas
                 está diseñado para liberarte de estos males y brindarte el
                 alivio que necesitas. Usándolo frío, es altamente efectivo para
@@ -285,32 +284,22 @@ async function GorritoPrice() {
                 Materiales
               </AccordionTrigger>
               <AccordionContent>
-                <ul>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-10" />
+                <ul className="list-disc pl-4">
+                  <li>
                     Gel de glicerina con grado médico, apto para terapias de
                     frío y calor.
                   </li>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-10" />
+                  <li>
                     Funda de licra y nylon, suave, cómoda y protectora para la
                     piel.
                   </li>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-10" />
+                  <li>
                     Composición elástica y suave en todo momento (no se pondrá
                     rígido)
                   </li>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-6" />
-                    No condensa (no te mojará)
-                  </li>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-10" />
-                    No tóxico y sin olor (seguro y sencillo de usar)
-                  </li>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-10" />
+                  <li>No condensa (no te mojará)</li>
+                  <li>No tóxico y sin olor (seguro y sencillo de usar)</li>
+                  <li>
                     Mantiene el frío hasta por 30 minutos (¡máxima relajación!)
                   </li>
                 </ul>
@@ -321,27 +310,23 @@ async function GorritoPrice() {
                 Instrucciones de uso
               </AccordionTrigger>
               <AccordionContent>
-                <ul>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-10" />
+                <ul className="list-disc pl-4">
+                  <li>
                     Para enfriar, coloca el gorrito dentro de la bolsa hermética
-                    cerrada y déjalo en el congelador por al menos 1-2 horas.
-                    <br /> Si lo deseas, puedes dejarlo ahí permanentemente.
+                    cerrada y déjalo en el congelador por al menos 1-2 horas. Si
+                    lo deseas, puedes dejarlo ahí permanentemente.
                   </li>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-10" />
+                  <li>
                     Para calentar, retira el gorrito de la bolsa hermética y
-                    colócalo en un plato. <br />
-                    Calienta en el microondas en intervalos de 1 minuto hasta
-                    alcanzar la temperatura deseada.
+                    colócalo en un plato. Calienta en el microondas en
+                    intervalos de 1 minuto hasta alcanzar la temperatura
+                    deseada.
                   </li>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-10" />
+                  <li>
                     Para limpiar, nunca sumerjas el gorrito en agua. Usa un paño
                     húmedo o una toalla para limpiarlo.
                   </li>
-                  <li className="flex items-start gap-x-2">
-                    <Dot className="size-10" />
+                  <li>
                     Si el gorrito se corta y el gel queda expuesto, deja de
                     usarlo y contáctanos para asistencia.
                   </li>
