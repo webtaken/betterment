@@ -52,7 +52,7 @@ export function VideoReviews() {
               key={video.url}
               videoSrc={video.url}
               thumbnailSrc={video.thumbnail}
-              className="w-[180px] h-[260px]"
+              className="w-[130px] h-[230px]"
             />
           ))}
         </div>
