@@ -29,7 +29,8 @@ import { GoToGorrito2 } from "./go-to-gorrito";
 import { CarouselImages } from "./carousel-images";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import Link from "next/link";
+import { AspectRatio } from "./ui/aspect-ratio";
+import { CustomHeroVideoDialog } from "./ui/hero-video-dialog";
 // import { AspectRatio } from "./ui/aspect-ratio";
 
 function ManWithGorrito() {
@@ -46,14 +47,15 @@ function ManWithGorrito() {
       </div>
 
       <section className="w-full md:w-[90%] md:mx-auto flex flex-col md:flex-row justify-center items-center md:h-auto py-4 md:py-10 gap-x-4 overflow-hidden">
-        <div className="md:hidden mx-auto my-4 px-12 sm:px-8">
-          <Image
-            src="/man_2.png"
-            alt="Man with betterment"
-            className="md:hidden object-cover rounded-xl"
-            width={500}
-            height={500}
-          />
+        <div className="md:hidden w-full h-full mx-auto my-4 px-12 sm:px-8">
+          <AspectRatio ratio={3 / 3}>
+            <Image
+              src="/man_2.png"
+              alt="Man with betterment"
+              className="md:hidden w-full h-full object-cover rounded-xl"
+              fill
+            />
+          </AspectRatio>
         </div>
         <div className="w-full">
           <Image
@@ -73,7 +75,7 @@ function ManWithGorrito() {
             <br className="hidden" />
             en el Perú
           </p>
-          <div className="my-6 space-y-2 text-left text-sm sm:text-base md:text-base lg:text-lg mx-12 sm:mx-auto sm:px-8 md:mx-0 md:px-0">
+          <div className="my-6 space-y-2 text-left text-xs sm:text-sm md:text-base lg:text-lg mx-12 sm:mx-auto sm:px-8 md:mx-0 md:px-0">
             <div className="grid grid-cols-2 gap-x-3 gap-y-2">
               <div className="flex items-center gap-x-2.5">
                 <Rotate3D className={iconBulletPointClass} />
@@ -124,54 +126,66 @@ function ManWithGorrito() {
 }
 
 function WomanWithGorrito() {
+  const listClass =
+    "sm:w-1/2 grid grid-cols-12 h-20 content-center gap-5 sm:gap-8 md:gap-10 lg:gap-10 content-center px-10 sm:px-0";
   return (
     <div className="relative">
       <section className="flex flex-col sm:flex-row relative overflow-hidden">
         <Image
           src="/girl2.png"
           alt="Girl with gorrito"
-          className="sm:hidden object-cover mx-auto"
+          className="sm:hidden object-cover w-[300px] h-[300px] mx-auto mt-4"
           width={500}
           height={500}
         />
-        <div className="text-center sm:text-left flex flex-col w-full sm:pl-12 md:pl-20 lg:pl-36 xl:pl-40 min-[1350px]:pl-56 2xl:pl-80 my-14 space-y-2 z-10">
-          <p className="text-primary text-2xl">Decirle adiós a la migraña...</p>
-          <p className="text-[#5fb9d1] text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold">
+        <div className="flex flex-col w-full sm:pl-12 md:pl-20 lg:pl-36 xl:pl-40 min-[1350px]:pl-56 2xl:pl-80 my-10 sm:my-12 space-y-2 z-10">
+          <p className="text-center sm:text-left text-primary text-2xl">
+            Decirle adiós a la migraña...
+          </p>
+          <p className="text-center sm:text-left text-[#5fb9d1] text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold">
             ¡Nunca fue tan fácil!
           </p>
+
           <div className="mx-auto sm:mx-0 pl-0 sm:pl-8 md:pl-16 space-y-4 pt-6">
-            <div className="flex items-center justify-center sm:justify-normal gap-x-2 sm:gap-x-4">
-              <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
-                1
-              </p>
-              <p className="sm:text-sm md:text-base">
-                Colócalo al menos 1-2 horas en el <br />
-                <span className="font-semibold">congelador</span>, dentro de su
-                bolsa plástica
-                <br /> cerrada
-              </p>
+            <div className="">
+              <div className={listClass}>
+                <p className="my-auto text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
+                  1
+                </p>
+                <p className="col-span-11 my-auto text-[0.85rem] sm:text-sm md:text-base">
+                  Colócalo al menos 1-2 horas en el{" "}
+                  <br className="hidden md:block" />
+                  <span className="font-semibold">congelador</span>, dentro de
+                  su bolsa plástica
+                  <br className="hidden md:block" /> cerrada
+                </p>
+              </div>
+              <div className={listClass}>
+                <p className="my-auto text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
+                  2
+                </p>
+                <p className="col-span-11 my-auto text-[0.85rem] sm:text-sm md:text-base">
+                  <span className="font-semibold">
+                    Ponte tu gorrito hasta cubrir los ojos
+                  </span>{" "}
+                  y<br className="hidden md:block" /> relájate, ¡Te quitará la
+                  migraña en 30 <br className="hidden md:block" /> minutos
+                </p>
+              </div>
+              <div className={listClass}>
+                <p className="my-auto text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
+                  3
+                </p>
+                <p className="col-span-11 my-auto text-[0.85rem] sm:text-sm md:text-base font-semibold">
+                  ¡Repite! Puedes usar tu gorrito todas las{" "}
+                  <br className="hidden md:block" /> veces que quieras
+                </p>
+              </div>
             </div>
-            <div className="flex items-center justify-center sm:justify-normal gap-x-2 sm:gap-x-4">
-              <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
-                2
-              </p>
-              <p className="text-sx sm:text-sm md:text-base">
-                <span className="font-semibold">
-                  Ponte tu gorrito hasta cubrir los ojos
-                </span>{" "}
-                y<br /> relájate, ¡Te quitará la migraña en 30 <br /> minutos
-              </p>
+
+            <div className="text-center sm:text-left">
+              <GoToGorrito2 className="my-4" />
             </div>
-            <div className="flex items-center justify-center sm:justify-normal gap-x-2 sm:gap-x-4">
-              <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary">
-                3
-              </p>
-              <p className="text-sx sm:text-sm md:text-base font-semibold">
-                ¡Repite! Puedes usar tu gorrito todas las <br /> veces que
-                quieras
-              </p>
-            </div>
-            <GoToGorrito2 className="my-4" />
           </div>
         </div>
         <div className="absolute w-[500px] lg:w-[550px] h-[600px] lg:h-[650px] right-12 sm:-right-20 md:-right-16 lg:right-16 xl:right-32 min-[1350px]:right-40 2xl:right-56 top-2">
@@ -235,7 +249,7 @@ async function GorritoPrice() {
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="flex flex-col lg:flex-row justify-between items-center">
+            <CardFooter className="flex flex-col lg:flex-row gap-y-2 justify-between items-center">
               <div className="flex items-center gap-x-4 text-primary text-lg">
                 <p className="line-through">S/. 99.90</p>
                 <p className="font-bold">
@@ -364,7 +378,7 @@ async function AccesorioPrice() {
           alt="Cinturón Accesorio"
           width={500}
           height={500}
-          className="object-cover min-[900px]:hidden mx-auto rounded-lg"
+          className="object-cover w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] min-[900px]:hidden mx-auto rounded-lg"
         />
         {/* Product Info Section */}
         <div className="flex w-full flex-col gap-6 z-10 relative sm:text-center min-[900px]:text-left">
@@ -397,11 +411,11 @@ async function AccesorioPrice() {
               </div>
             </CardContent>
             <CardFooter className="flex flex-col sm:flex-row justify-center gap-4 items-center">
-              <Button className="text-white text-xs sm:text-base md:text-lg font-semibold rounded-full px-4">
-                <Link href="https://wa.link/94d9qp" target="_blank">
+              <CustomHeroVideoDialog videoSrc="https://www.youtube.com/embed/QMSThlB9pFI">
+                <Button className="text-white text-xs sm:text-base md:text-lg font-semibold rounded-full px-4">
                   Ver vídeo
-                </Link>
-              </Button>
+                </Button>
+              </CustomHeroVideoDialog>
               <AddToCart />
             </CardFooter>
           </Card>

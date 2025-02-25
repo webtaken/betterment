@@ -40,7 +40,7 @@ export async function Testimonials() {
             <ScrollBar />
           </ScrollArea>
         </div>
-        <p className="text-center italic text-white text-2xl md:text-3xl font-bold my-10 px-4">
+        <p className="text-center italic text-white text-2xl md:text-3xl font-bold my-8 px-4">
           Clientes felices y libres de migraña
         </p>
         <VideoReviews />

@@ -40,7 +40,7 @@ export function Footer() {
                 <Instagram className="size-5 hover:size-6 transition-transform fill-white" />
               </Link>
               <Link
-                href="https://www.tiktok.com/@betterment_pe"
+                href="https://www.tiktok.com/@betterment_peru?_t=ZM-8u7K8eyOhMt&_r=1"
                 target="_blank"
               >
                 <Tiktok className="size-5 hover:size-6 transition-transform fill-white" />
