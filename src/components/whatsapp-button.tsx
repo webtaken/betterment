@@ -7,21 +7,23 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import WhatsApp from "@/assets/whatsapp";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export function WhatsappButton() {
+  const router = useRouter();
   return (
     <TooltipProvider delayDuration={200}>
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
-            className="size-10 bg-green-600 hover:bg-green-600 fixed bottom-4 right-4 rounded-full shadow-lg z-50"
+            className="hover:cursor-pointer bg-green-600 hover:bg-green-600 fixed bottom-4 right-4 rounded-full shadow-lg z-50"
             size="icon"
             asChild
+            onClick={() => {
+              router.push("https://wa.link/94d9qp");
+            }}
           >
-            <Link href="https://wa.link/94d9qp" target="_blank">
-              <WhatsApp className="size-20" />
-            </Link>
+            <WhatsApp className="size-10 md:size-14" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>

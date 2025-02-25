@@ -1,16 +1,13 @@
 import * as React from "react";
+
 import type { SVGProps } from "react";
-const WhatsApp = ({
-  className,
-  ...props
-}: SVGProps<SVGSVGElement> & { className?: string }) => (
+const WhatsApp = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    viewBox="0 0 259 259"
+    viewBox="0 0 256 259"
+    width="2em"
+    height="2em"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMidYMid"
-    width={"1em"}
-    height={"1em"}
-    className={className}
     {...props}
   >
     <path
@@ -23,4 +20,5 @@ const WhatsApp = ({
     />
   </svg>
 );
+
 export default WhatsApp;
