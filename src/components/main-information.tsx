@@ -35,8 +35,8 @@ import { CustomHeroVideoDialog } from "./ui/hero-video-dialog";
 
 function ManWithGorrito() {
   const bulletPointsClass =
-    "flex items-center gap-x-2 w-fit text-wrap text-left p-0 hover:bg-transparent hover:cursor-text select-text h-auto text-base md:text-lg lg:text-xl xl:text-2xl";
-  const iconBulletPointClass = "stroke-white size-9 md:size-12";
+    "flex items-center gap-x-2 w-fit text-wrap text-left p-0 hover:bg-transparent hover:cursor-text select-text h-auto text-xs sm:text-sm md:text-base lg:text-lg";
+  const iconBulletPointClass = "stroke-white size-7 sm:size-9 md:size-12";
 
   return (
     <section className="bg-primary">
@@ -75,7 +75,7 @@ function ManWithGorrito() {
             <br className="hidden" />
             en el Perú
           </p>
-          <div className="my-6 space-y-2 text-left text-xs sm:text-sm md:text-base lg:text-lg mx-12 sm:mx-auto sm:px-8 md:mx-0 md:px-0">
+          <div className="my-6 space-y-2 text-left mx-12 sm:mx-auto sm:px-8 md:mx-0 md:px-0">
             <div className="grid grid-cols-2 gap-x-3 gap-y-2">
               <div className="flex items-center gap-x-2.5">
                 <Rotate3D className={iconBulletPointClass} />
