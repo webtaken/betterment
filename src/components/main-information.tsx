@@ -210,9 +210,9 @@ async function GorritoPrice() {
   return (
     <section
       id="gorrito"
-      className="bg-low-primary pt-12 px-8 sm:px-10 md:px-12 lg:px-16"
+      className="bg-low-primary py-12 px-8 sm:px-10 md:px-12 lg:px-16"
     >
-      <div className="w-full mx-auto md:w-[90%] flex flex-col min-[900px]:flex-row justify-center gap-8">
+      <div className="w-full mx-auto md:w-[90%] max-w-5xl flex flex-col min-[900px]:flex-row justify-center gap-8">
         <div className="w-full mx-auto items-center mb-4 lg:mb-8">
           <CarouselImages />
           {/* <AspectRatio ratio={4 / 3}>
@@ -266,7 +266,7 @@ async function GorritoPrice() {
           <Accordion
             type="single"
             collapsible
-            className="w-full -space-y-2 mx-auto md:mx-0 lg:mx-0 mb-4 px-8 text-white"
+            className="w-full -space-y-2 mx-auto md:mx-0 lg:mx-0 px-8 text-white"
           >
             <AccordionItem value="item-1">
               <AccordionTrigger className="py-2 text-sm">
@@ -372,7 +372,7 @@ async function AccesorioPrice() {
       id="gorrito_accesorio"
       className="bg-low-white w-full h-full overflow-hidden"
     >
-      <div className="flex flex-col min-[900px]:flex-row py-10 px-8 justify-center items-center gap-8">
+      <div className="flex flex-col min-[900px]:flex-row py-10 px-8 justify-center items-center gap-y-2 min-[900px]:gap-8 max-w-5xl mx-auto">
         <Image
           src="/cinturon.png"
           alt="Cinturón Accesorio"
