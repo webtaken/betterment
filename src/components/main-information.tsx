@@ -212,17 +212,9 @@ async function GorritoPrice() {
       id="gorrito"
       className="bg-low-primary py-12 px-8 sm:px-10 md:px-12 lg:px-16"
     >
-      <div className="w-full mx-auto md:w-[90%] max-w-5xl flex flex-col min-[900px]:flex-row justify-center gap-8">
-        <div className="w-full mx-auto items-center mb-4 lg:mb-8">
+      <div className="w-full mx-auto md:w-[95%] max-w-5xl flex flex-col min-[900px]:flex-row justify-center gap-8">
+        <div className="w-full min-[900px]:w-1/2 mx-auto items-center mb-4 lg:mb-8">
           <CarouselImages />
-          {/* <AspectRatio ratio={4 / 3}>
-            <Image
-              src="/man_gorrito.png"
-              alt="Man with gorrito betterment"
-              fill
-              className="object-[25%_25%] object-cover w-full h-full rounded-xl"
-            />
-          </AspectRatio> */}
         </div>
 
         <div className="w-full min-[900px]:w-1/2 mx-auto lg:mx-0 flex flex-col gap-6">
@@ -249,7 +241,7 @@ async function GorritoPrice() {
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="flex flex-col lg:flex-row gap-y-2 justify-between items-center">
+            <CardFooter className="flex flex-col min-[1200px]:flex-row gap-y-2 justify-between items-center">
               <div className="flex items-center gap-x-2 text-primary">
                 <p className="line-through">S/. 99.90</p>
                 <p className="font-bold">
@@ -269,7 +261,7 @@ async function GorritoPrice() {
             className="w-full -space-y-2 mx-auto md:mx-0 lg:mx-0 px-8 text-white"
           >
             <AccordionItem value="item-1">
-              <AccordionTrigger className="py-2 text-sm">
+              <AccordionTrigger className="py-2 text-sm hover:no-underline">
                 Descripción
               </AccordionTrigger>
               <AccordionContent className="text-sm">
@@ -283,7 +275,7 @@ async function GorritoPrice() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger className="py-2 text-sm">
+              <AccordionTrigger className="py-2 text-sm hover:no-underline">
                 Materiales
               </AccordionTrigger>
               <AccordionContent>
@@ -309,7 +301,7 @@ async function GorritoPrice() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger className="py-2 text-sm">
+              <AccordionTrigger className="py-2 text-sm hover:no-underline">
                 Instrucciones de uso
               </AccordionTrigger>
               <AccordionContent>
@@ -337,7 +329,7 @@ async function GorritoPrice() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger className="py-2 text-sm">
+              <AccordionTrigger className="py-2 text-sm hover:no-underline">
                 Envío y entrega
               </AccordionTrigger>
               <AccordionContent>
@@ -359,9 +351,9 @@ async function AccesorioPrice() {
   return (
     <section
       id="gorrito_accesorio"
-      className="bg-low-white w-full h-full overflow-hidden"
+      className="bg-low-white w-[80%] mx-auto h-full overflow-hidden"
     >
-      <div className="flex flex-col min-[900px]:flex-row py-10 px-8 justify-center items-center gap-y-2 min-[900px]:gap-8 max-w-5xl mx-auto">
+      <div className="flex flex-col min-[900px]:flex-row py-10 px-0 justify-center items-center gap-y-2 min-[900px]:gap-10 max-w-5xl mx-auto">
         <Image
           src="/cinturon.png"
           alt="Cinturón Accesorio"
@@ -414,8 +406,8 @@ async function AccesorioPrice() {
           src="/cinturon.png"
           alt="Accesorio"
           className="hidden min-[900px]:block w-1/2 mx-auto object-cover"
-          width={500}
-          height={500}
+          width={600}
+          height={600}
         />
       </div>
     </section>
