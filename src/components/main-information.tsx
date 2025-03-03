@@ -351,9 +351,9 @@ async function AccesorioPrice() {
   return (
     <section
       id="gorrito_accesorio"
-      className="bg-low-white w-[80%] mx-auto h-full overflow-hidden"
+      className="bg-low-white w-full h-full overflow-hidden"
     >
-      <div className="flex flex-col min-[900px]:flex-row py-10 px-0 justify-center items-center gap-y-2 min-[900px]:gap-10 max-w-5xl mx-auto">
+      <div className="flex flex-col min-[900px]:flex-row py-10 px-8 justify-center items-center gap-y-2 min-[900px]:gap-8 max-w-6xl mx-auto">
         <Image
           src="/cinturon.png"
           alt="Cinturón Accesorio"
