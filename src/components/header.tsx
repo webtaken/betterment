@@ -6,11 +6,11 @@ import Link from "next/link";
 export function Header() {
   return (
     <header className="min-w-full">
-      <section className="bg-primary text-center py-1">
+      {/* <section className="bg-primary text-center py-1">
         <p className="text-white italic text-[10px]">
           Envío GRATIS a ciertas zonas
         </p>
-      </section>
+      </section> */}
       <section className="bg-low-primary flex justify-center items-center py-6">
         <Link href="/" className="flex items-center gap-x-2">
           <Image
