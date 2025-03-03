@@ -12,7 +12,7 @@ export function Header() {
         </p>
       </section>
       <section className="bg-low-primary flex justify-center items-center py-6">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-x-2">
           <Image
             src="/logo.png"
             alt="Logo Betterment"

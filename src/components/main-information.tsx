@@ -273,24 +273,13 @@ async function GorritoPrice() {
                 Descripción
               </AccordionTrigger>
               <AccordionContent className="text-sm">
-                Migrañas? Dolores de cabeza? Tensión? El Gorrito Antimigrañas
-                está diseñado para liberarte de estos males y brindarte el
-                alivio que necesitas. Usándolo frío, es altamente efectivo para
-                aliviar migrañas y dolores de cabeza, además de ayudarte a
-                relajarte profundamente. Su diseño ergonómico se ajusta
-                cómodamente a tu cabeza, ofreciendo una cobertura 360° que
-                abarca hasta los ojos. Bloquea por completo la luz y aplica una
-                presión ligera, ideal para aliviar tensiones. Y sí… ¡puedes
-                usarlo como antifaz para dormir con más frescura y comodidad!
-                <br /> Si prefieres, también puedes usarlo como una compresa.
-                Caliente, es ideal para aliviar cólicos menstruales, dolores
-                estomacales, molestias en la espalda o el cuello. También mejora
-                el flujo sanguíneo, reduce la rigidez articular y calma los
-                espasmos musculares, proporcionando un alivio cálido y
-                reconfortante. Fría, reduce la inflamación y alivia el dolor en
-                casos de golpes o lesiones, acelerando la recuperación muscular.
-                <br />
-                Incluye una bolsa hermética protectora e instrucciones de uso.
+                ¿Migrañas, dolores de cabeza o tensión? El Gorrito Anti-Migrañas
+                te brindará el alivio que necesitas. Solo enfríalo en el freezer
+                ¡y listo! Su gel de grado médico, diseño ergonómico 360° bloquea
+                la luz y aplica una presión ligera ideal para reducir las
+                migrañas. Úsalo también como compresa caliente para aliviar
+                cólicos menstruales, dolores musculares y mejorar la
+                circulación. Incluye bolsa hermética e instrucciones.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
@@ -397,15 +386,15 @@ async function AccesorioPrice() {
             <CardContent className="text-white">
               <div className="flex flex-col gap-2 text-sm sm:text-base">
                 <div className="flex items-center gap-x-2">
-                  <CheckCircle2 className="size-5 fill-white stroke-low-primary" />
+                  <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
                   <p>Alivia cólicos menstruales</p>
                 </div>
                 <div className="flex items-center gap-x-2">
-                  <CheckCircle2 className="size-5 fill-white stroke-low-primary" />
+                  <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
                   <p>Ideal para dolor abdominal y lumbar</p>
                 </div>
                 <div className="flex items-center gap-x-2">
-                  <CheckCircle2 className="size-5 fill-white stroke-low-primary" />
+                  <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
                   <p>Ajuste a tu medida</p>
                 </div>
               </div>

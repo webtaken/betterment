@@ -22,7 +22,7 @@ const images: CarouselImage[] = [
     object: "object-[25%_25%]",
   },
   {
-    source: "/girl_gorrito_special.png",
+    source: "/girl_gorrito_special_2.png",
     alt: "Girl with gorrito betterment",
     object: "object-[25%_25%]",
   },
