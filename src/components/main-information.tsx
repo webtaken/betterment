@@ -599,14 +599,14 @@ export async function MainInformation() {
                   <p>
                     <span className="font-semibold">
                       Aliviar el estrés y la tensión
-                    </span>
+                    </span>{" "}
                     acumulada
                   </p>
                 </Button>
                 <Button className={buttonClass} variant="ghost">
                   <Snowflake className="size-10" />
                   <p>
-                    Reduce la
+                    Reduce la{" "}
                     <span className="font-semibold">inflamación local</span> y
                     alivia el{" "}
                     <span className="font-semibold">dolor de un golpe</span> o
