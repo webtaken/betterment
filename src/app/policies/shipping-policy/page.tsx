@@ -4,13 +4,13 @@ export default function Page() {
       <h1 className="text-4xl font-bold">Política de envío</h1>
       <br />
       <p>
-        <span className="font-bold">Política de Envíos de Betterment Peru</span>
+        <span className="font-bold">Política de Envíos de Betterment Perú</span>
         <br />
         <br />
         Mes de entrada en vigencia: Diciembre, 2023
         <br />
         <br />
-        Bienvenido a Betterment Peru. Nos esforzamos por brindarte una
+        Bienvenido a Betterment Perú. Nos esforzamos por brindarte una
         experiencia de compra eficiente y satisfactoria. A continuación,
         detallamos nuestra política de envíos para que conozcas los procesos y
         tiempos asociados a tus pedidos.
@@ -43,7 +43,7 @@ export default function Page() {
         <span className="font-bold">4. Seguimiento de Envíos:</span>
         <br />
         <br />
-        Para envios fuera de Lima y Callao, proporcionaremos un número de
+        Para envíos fuera de Lima y Callao, proporcionaremos un número de
         seguimiento una vez que tu pedido haya sido enviado. Puedes utilizar
         esta información para rastrear el estado de tu envío.
         <br />
@@ -54,8 +54,8 @@ export default function Page() {
         Es responsabilidad del cliente proporcionar una dirección de envío
         correcta. Verifica la información antes de confirmar tu pedido, ya que
         no nos hacemos responsables por envíos a direcciones incorrectas. En
-        caso se ingrese una direccion incorrecta, el pedido sera devuelto a la
-        tienda y el cliente debera abonar el costo del segundo envio, de ser
+        caso se ingrese una dirección incorrecta, el pedido sera devuelto a la
+        tienda y el cliente debera abonar el costo del segundo envío, de ser
         necesario.
         <br />
         <br />
@@ -74,9 +74,9 @@ export default function Page() {
         mensajería para ajustar cualquier detalle relacionado con la hora de
         entrega.
         <br />
-        En caso de que el cliente no responsa o se haga presente a la hora
+        En caso de que el cliente no responda o se haga presente a la hora
         acordada de entrega, hay un periodo de espera de 10 minutos, pasados
-        estos, no se podra esperar mas al cliente y se tendra que coordinar una
+        estos, no se podra esperar más al cliente y se tendrá que coordinar una
         nueva entrega.
         <br />
         <br />
@@ -88,7 +88,7 @@ export default function Page() {
         publicación en nuestro sitio web.
         <br />
         <br />
-        Agradecemos tu confianza en Betterment Peru. Si tienes alguna pregunta o
+        Agradecemos tu confianza en Betterment Perú. Si tienes alguna pregunta o
         inquietud sobre nuestra política de envíos, no dudes en contactarnos.
         ¡Gracias por elegirnos!
       </p>

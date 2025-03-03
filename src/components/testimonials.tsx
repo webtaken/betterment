@@ -27,7 +27,7 @@ export async function Testimonials() {
         </div>
         <div className="sm:hidden w-[85%] md:w-[90%] mx-auto">
           <ScrollArea className="w-full bg-white rounded-2xl h-[200px]">
-            <div className="grid max-[420px]:grid-cols-2 max-[550px]:grid-cols-3 max-[640px]:grid-cols-3 gap-4 items-start py-3 px-4">
+            <div className="grid grid-cols-1 justify-items-center min-[420px]:grid-cols-2 gap-4 items-start py-3 px-4">
               {reviews.map((review) => (
                 <div
                   key={review.name}

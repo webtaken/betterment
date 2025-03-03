@@ -46,7 +46,7 @@ function ManWithGorrito() {
         </p>
       </div>
 
-      <section className="w-full md:w-[90%] md:mx-auto flex flex-col md:flex-row justify-center items-center md:h-auto py-4 md:py-10 gap-x-4 overflow-hidden">
+      <section className="w-full md:w-[90%] md:mx-auto flex flex-col md:flex-row justify-center items-center md:h-auto py-4 md:py-10 gap-x-4 overflow-hidden max-w-5xl">
         <div className="md:hidden w-full h-full mx-auto my-4 px-12 sm:px-8">
           <AspectRatio ratio={3 / 3}>
             <Image
@@ -250,7 +250,7 @@ async function GorritoPrice() {
               </div>
             </CardContent>
             <CardFooter className="flex flex-col lg:flex-row gap-y-2 justify-between items-center">
-              <div className="flex items-center gap-x-4 text-primary text-lg">
+              <div className="flex items-center gap-x-2 text-primary">
                 <p className="line-through">S/. 99.90</p>
                 <p className="font-bold">
                   {/* `S/. ${Number.parseFloat(
@@ -383,7 +383,7 @@ async function AccesorioPrice() {
         {/* Product Info Section */}
         <div className="flex w-full flex-col gap-6 z-10 relative sm:text-center min-[900px]:text-left">
           <Badge className="sm:mx-auto min-[900px]:mx-0 w-fit rounded-sm text-white italic text-base">
-            Nuevo
+            NUEVO
           </Badge>
           <h1 className="text-secondary text-4xl font-bold">
             Diseñado para ti
@@ -402,7 +402,7 @@ async function AccesorioPrice() {
                 </div>
                 <div className="flex items-center gap-x-2">
                   <CheckCircle2 className="size-5 fill-white stroke-low-primary" />
-                  <p>Ideal para dolor abdominal lumbar</p>
+                  <p>Ideal para dolor abdominal y lumbar</p>
                 </div>
                 <div className="flex items-center gap-x-2">
                   <CheckCircle2 className="size-5 fill-white stroke-low-primary" />
@@ -583,6 +583,8 @@ async function AccesorioPrice() {
 // }
 
 export async function MainInformation() {
+  const buttonClass =
+    "flex items-center text-wrap p-3 select-text hover:bg-transparent hover:text-white hover:cursor-text text-left text-xs md:text-sm";
   return (
     <main className="bg-low-white">
       <div className="my-6">
@@ -601,94 +603,94 @@ export async function MainInformation() {
               <CardHeader>
                 <CardTitle className="text-center">Crioterapia</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2 text-xs md:text-base">
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Snowflake className="size-6" />
+              <CardContent className="space-y-4 mt-2 text-xs md:text-base">
+                <Button className={buttonClass} variant="ghost">
+                  <Snowflake className="size-10" />
                   <p>
                     Alivia{" "}
                     <span className="font-semibold">
                       dolores de cabeza, migrañas y fiebre
                     </span>
                   </p>
-                </div>
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Snowflake className="size-6" />
+                </Button>
+                <Button className={buttonClass} variant="ghost">
+                  <Snowflake className="size-10" />
                   <p>
                     <span className="font-semibold">
                       Aliviar el estrés y la tensión
                     </span>
                     acumulada
                   </p>
-                </div>
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Snowflake className="size-6" />
+                </Button>
+                <Button className={buttonClass} variant="ghost">
+                  <Snowflake className="size-10" />
                   <p>
-                    Reduce la{" "}
-                    <span className="font-semibold">inflamación local</span>y
+                    Reduce la
+                    <span className="font-semibold">inflamación local</span> y
                     alivia el{" "}
                     <span className="font-semibold">dolor de un golpe</span> o
                     lesión
                   </p>
-                </div>
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Snowflake className="size-6" />
+                </Button>
+                <Button className={buttonClass} variant="ghost">
+                  <Snowflake className="size-10" />
                   <p>
                     Acelera la{" "}
                     <span className="font-semibold">recuperación muscular</span>
-                  </p>
-                </div>
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Snowflake className="size-6" />
+                  </p>{" "}
+                </Button>
+                <Button className={buttonClass} variant="ghost">
+                  <Snowflake className="size-10" />
                   <p>
                     <span className="font-semibold">Mejora tu circulación</span>{" "}
                     para sentirte con más energía
                   </p>
-                </div>
+                </Button>
               </CardContent>
             </Card>
             <Card className="bg-secondary text-white w-[300px] sm:w-[350px] md:w-[450px] mx-auto lg:mx-0 rounded-3xl">
               <CardHeader>
                 <CardTitle className="text-center">Termoterapia</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2 text-xs md:text-base">
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Flame className="size-6" />
+              <CardContent className="space-y-4 mt-2">
+                <Button className={buttonClass} variant="ghost">
+                  <Flame className="size-10" />
                   <p>
                     Alivia{" "}
                     <span className="font-semibold">
                       cólicos menstruales, estomacales y dolor lumbar
                     </span>
                   </p>
-                </div>
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Flame className="size-6" />
+                </Button>
+                <Button className={buttonClass} variant="ghost">
+                  <Flame className="size-10" />
                   <p>
                     Alivia{" "}
                     <span className="font-semibold">dolores crónicos</span> de{" "}
                     <span className="font-semibold">espalda o cuello</span>
                   </p>
-                </div>
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Flame className="size-6" />
+                </Button>
+                <Button className={buttonClass} variant="ghost">
+                  <Flame className="size-10" />
                   <p>
                     Aumenta el{" "}
                     <span className="font-semibold">flujo sanguíneo</span>
                   </p>
-                </div>
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Flame className="size-6" />
+                </Button>
+                <Button className={buttonClass} variant="ghost">
+                  <Flame className="size-10" />
                   <p>
                     Disminuye la{" "}
                     <span className="font-semibold">rigidez articular</span>{" "}
                   </p>
-                </div>
-                <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-                  <Flame className="size-6" />
+                </Button>
+                <Button className={buttonClass} variant="ghost">
+                  <Flame className="size-10" />
                   <p>
                     Alivia el dolor de{" "}
                     <span className="font-semibold">espasmos musculares</span>
                   </p>
-                </div>
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -700,55 +702,51 @@ export async function MainInformation() {
           <CardHeader>
             <CardTitle className="text-center">Crioterapia</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-2 text-xs md:text-base">
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Snowflake className="size-6" />
+          <CardContent className="space-y-4 text-xs md:text-base">
+            <Button className={buttonClass} variant="ghost">
+              <Snowflake className="size-10" />
               <p>
                 Alivia{" "}
                 <span className="font-semibold">
                   dolores de cabeza, migrañas y fiebre
                 </span>
               </p>
-            </div>
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Snowflake className="size-6" />
+            </Button>
+            <Button className={buttonClass} variant="ghost">
+              <Snowflake className="size-10" />
               <p>
                 <span className="font-semibold">
-                  Aliviar el estrés y la tensión
+                  Alivia el estrés y la tensión
                 </span>
                 <br />
                 acumulada
               </p>
-            </div>
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Snowflake className="size-6" />
+            </Button>
+            <Button className={buttonClass} variant="ghost">
+              <Snowflake className="size-10" />
               <p>
                 Reduce la{" "}
-                <span className="font-semibold">inflamación local</span>
-                <br /> y alivia el{" "}
-                <span className="font-semibold">
-                  dolor de un golpe
-                </span> <br /> o lesión
+                <span className="font-semibold">inflamación local</span> y
+                alivia el{" "}
+                <span className="font-semibold">dolor de un golpe</span> o
+                lesión
               </p>
-            </div>
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Snowflake className="size-6" />
+            </Button>
+            <Button className={buttonClass} variant="ghost">
+              <Snowflake className="size-10" />
               <p>
                 Acelera la{" "}
-                <span className="font-semibold">
-                  recuperación <br />
-                  muscular
-                </span>
+                <span className="font-semibold">recuperación muscular</span>
               </p>
-            </div>
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Snowflake className="size-6" />
+            </Button>
+            <Button className={buttonClass} variant="ghost">
+              <Snowflake className="size-10" />
               <p>
                 <span className="font-semibold">Mejora tu circulación</span>{" "}
                 para <br />
                 sentirte con más energía
               </p>
-            </div>
+            </Button>
           </CardContent>
         </Card>
         <Card className="bg-secondary text-white w-[300px] sm:w-[350px] mx-auto rounded-3xl">
@@ -756,52 +754,46 @@ export async function MainInformation() {
             <CardTitle className="text-center">Termoterapia</CardTitle>
           </CardHeader>
           <CardContent className="space-y-2 text-xs md:text-base">
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Flame className="size-6" />
+            <Button className={buttonClass} variant="ghost">
+              <Flame className="size-10" />
               <p>
                 Alivia{" "}
                 <span className="font-semibold">
-                  cólicos menstruales,
-                  <br /> estomacales y dolor lumbar
+                  cólicos menstruales, estomacales y dolor lumbar
                 </span>
-              </p>
-            </div>
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Flame className="size-6" />
+              </p>{" "}
+            </Button>
+            <Button className={buttonClass} variant="ghost">
+              <Flame className="size-10" />
               <p>
                 Alivia <span className="font-semibold">dolores crónicos</span>{" "}
-                de <br />{" "}
-                <span className="font-semibold">espalda o cuello</span>
+                de <span className="font-semibold">espalda o cuello</span>
               </p>
-            </div>
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Flame className="size-6" />
+            </Button>
+            <Button className={buttonClass} variant="ghost">
+              <Flame className="size-10" />
               <p>
                 Aumenta el{" "}
                 <span className="font-semibold">flujo sanguíneo</span>
               </p>
-            </div>
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Flame className="size-6" />
+            </Button>
+            <Button className={buttonClass} variant="ghost">
+              <Flame className="size-10" />
               <p>
                 Disminuye la{" "}
-                <span className="font-semibold">rigidez articular</span>{" "}
+                <span className="font-semibold">rigidez articular</span>
               </p>
-            </div>
-            <div className="flex gap-x-2 items-start mx-2 md:mx-6">
-              <Flame className="size-6" />
+            </Button>
+            <Button className={buttonClass} variant="ghost">
+              <Flame className="size-10" />
               <p>
                 Alivia el dolor de{" "}
-                <span className="font-semibold">
-                  espasmos <br />
-                  musculares
-                </span>
+                <span className="font-semibold">espasmos musculares</span>
               </p>
-            </div>
+            </Button>
           </CardContent>
         </Card>
       </div>
-
       <ManWithGorrito />
       <WomanWithGorrito />
       <GorritoPrice />

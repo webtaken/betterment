@@ -5,14 +5,14 @@ export default function Page() {
       <br />
       <p>
         <span className="font-bold">
-          Términos y Condiciones de Betterment Peru
+          Términos y Condiciones de Betterment Perú
         </span>
         <br />
         <br />
         Mes de entrada en vigencia: Diciembre, 2023
         <br />
         <br />
-        Bienvenido a Betterment Peru. Al realizar una compra en nuestro sitio
+        Bienvenido a Betterment Perú. Al realizar una compra en nuestro sitio
         web, aceptas los siguientes términos y condiciones:
         <br />
         <br />
@@ -77,7 +77,7 @@ export default function Page() {
         contacto@bettermentperu.com.
         <br />
         <br />
-        Al realizar una compra en Betterment Peru, aceptas estos términos y
+        Al realizar una compra en Betterment Perú, aceptas estos términos y
         condiciones. Te agradecemos por elegirnos y confiar en nuestros
         productos.
       </p>

@@ -5,12 +5,12 @@ export default function Page() {
       <br />
       <p>
         <span className="font-bold">
-          Política de Privacidad de Betterment Peru
+          Política de Privacidad de Betterment Perú
         </span>
         <br />
         Mes de entrada en vigencia: Diciembre, 2023.
         <br />
-        En Betterment Peru, valoramos tu privacidad y nos comprometemos a
+        En Betterment Perú, valoramos tu privacidad y nos comprometemos a
         proteger la información personal que nos brindas. Esta Política de
         Privacidad describe cómo recopilamos, utilizamos y compartimos tu
         información cuando utilizas nuestros servicios. Al acceder a nuestros
@@ -53,11 +53,12 @@ export default function Page() {
         notificaremos sobre cambios significativos y te brindaremos la
         oportunidad de revisar y aceptar los nuevos términos.
         <br />
+        <br />
         <span className="font-bold">Contacto:</span> Si tienes preguntas sobre
         esta Política de Privacidad, contáctanos en contacto@bettermentperu.com.
         <br />
         <br />
-        Gracias por confiar en Betterment Peru. Estamos comprometidos a proteger
+        Gracias por confiar en Betterment Perú. Estamos comprometidos a proteger
         tu privacidad y proporcionarte una experiencia segura y satisfactoria.
       </p>
     </main>
