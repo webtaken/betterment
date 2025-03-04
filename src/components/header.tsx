@@ -12,13 +12,13 @@ export function Header() {
         </p>
       </section> */}
       <section className="bg-low-primary flex justify-center items-center py-6">
-        <Link href="/" className="flex items-center gap-x-2">
+        <Link href="/" className="flex items-center gap-x-0">
           <Image
             src="/logo.png"
             alt="Logo Betterment"
             width={100}
             height={100}
-            className="size-8"
+            className="size-14"
           />
           <p className="col-start-2 text-center text-white text-3xl font-bold">
             Betterment

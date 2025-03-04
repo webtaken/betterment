@@ -9,13 +9,13 @@ export function Footer() {
     <footer className="bg-primary py-10 px-9 sm:px-10 flex flex-col gap-y-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-white gap-10 max-w-5xl mx-0 md:mx-auto">
         <div className="flex flex-col">
-          <Link href="/" className="flex items-center gap-x-2">
+          <Link href="/" className="flex items-center gap-x-0">
             <Image
               src="/logo.png"
               alt="Logo Betterment"
               width={100}
               height={100}
-              className="size-8"
+              className="size-12"
             />
             <h1 className="text-3xl font-bold">Betterment</h1>
           </Link>

@@ -16,14 +16,14 @@ export function WhatsappButton() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
-            className="hover:cursor-pointer bg-[#25D366] hover:bg-[#25D366] fixed bottom-4 right-4 rounded-full z-50 p-0.5"
+            className="hover:cursor-pointer bg-[#25D366] hover:bg-[#25D366] fixed bottom-8 right-8 rounded-full z-50 p-[0.620rem]"
             size="icon"
             asChild
             onClick={() => {
               router.push("https://wa.link/94d9qp");
             }}
           >
-            <WhatsApp className="size-8 md:size-12" />
+            <WhatsApp className="size-8 md:size-[3.5rem]" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>

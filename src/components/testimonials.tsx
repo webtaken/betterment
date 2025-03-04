@@ -7,8 +7,11 @@ export async function Testimonials() {
   return (
     <div className="bg-low-white">
       <div className="bg-low-primary pb-10">
-        <p className="text-center text-white text-xl md:text-3xl pt-8 mb-8 font-bold px-4">
+        <p className="text-center text-white text-xl md:text-3xl pt-12 px-4">
           Más de 25 000 opiniones positivas
+        </p>
+        <p className="text-center text-white text-xl md:text-3xl mb-8 font-bold px-4">
+          en todo el mundo
         </p>
         <div className="hidden sm:block w-[95%] sm:w-[80%] md:w-[80%] mx-auto">
           <ScrollArea className="w-full bg-white rounded-2xl">
@@ -40,8 +43,9 @@ export async function Testimonials() {
             <ScrollBar />
           </ScrollArea>
         </div>
-        <p className="text-center italic text-white text-2xl md:text-3xl font-bold my-8 px-4">
-          Clientes felices y libres de migraña
+        <p className="text-center text-white text-2xl md:text-3xl mt-12 mb-8 px-4">
+          Nuestras clientas{" "}
+          <span className="font-bold italic">migraña free</span>
         </p>
         <VideoReviews />
       </div>

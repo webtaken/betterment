@@ -34,7 +34,7 @@ export function Hero() {
               <GoToGorrito1 />
             </div>
           </div>
-          <div className="absolute sm:-right-28 sm:-top-6 sm:w-[65%] sm:h-[110%] lg:-right-28 lg:-top-20 lg:w-[60%] lg:h-[127%] -z-40">
+          <div className="absolute sm:-right-32 md:-right-36 sm:-top-6 sm:w-[65%] sm:h-[110%] lg:-right-32 lg:-top-20 lg:w-[60%] lg:h-[127%] xl:h-[150%] -z-40">
             <div className="relative w-full h-full">
               <Image
                 src="/girl.png"
