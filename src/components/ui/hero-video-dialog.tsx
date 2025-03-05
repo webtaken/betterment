@@ -260,3 +260,39 @@ export function CustomHeroVideoDialog({
     </div>
   );
 }
+
+export function CustomHeroVideoDialogMobile({
+  videoSrc,
+  children,
+  className,
+}: CustomHeroVideoProps) {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  return (
+    <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+      <DialogTrigger asChild>
+        <div className={cn("relative", className)}>
+          <div
+            className="group relative cursor-pointer"
+            onClick={() => setIsVideoOpen(true)}
+          >
+            {children}
+          </div>
+        </div>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[800px] rounded-xl">
+        <DialogHeader>
+          <DialogTitle>Video Reseña</DialogTitle>
+        </DialogHeader>
+        <div className="aspect-video">
+          <iframe
+            src={videoSrc}
+            className="w-full h-full rounded-md"
+            allowFullScreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+}
