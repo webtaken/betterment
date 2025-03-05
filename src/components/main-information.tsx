@@ -395,16 +395,31 @@ async function AccesorioPrice() {
             <CardContent className="text-white">
               <div className="flex flex-col gap-2 text-sm sm:text-base pl-4">
                 <div className="flex items-center gap-x-2">
-                  <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
-                  <p>Alivia cólicos menstruales</p>
+                  <Button
+                    variant="ghost"
+                    className="flex items-center gap-x-2 text-wrap text-left p-0 hover:bg-transparent hover:text-white select-text hover:cursor-text"
+                  >
+                    <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
+                    <p>Alivia cólicos menstruales</p>
+                  </Button>
                 </div>
                 <div className="flex items-center gap-x-2">
-                  <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
-                  <p>Ideal para dolor abdominal y lumbar</p>
+                  <Button
+                    variant="ghost"
+                    className="flex items-center gap-x-2 text-wrap text-left p-0 hover:bg-transparent hover:text-white select-text hover:cursor-text"
+                  >
+                    <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
+                    <p>Ideal para dolor abdominal y lumbar</p>
+                  </Button>
                 </div>
                 <div className="flex items-center gap-x-2">
-                  <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
-                  <p>Ajuste a tu medida</p>
+                  <Button
+                    variant="ghost"
+                    className="flex items-center gap-x-2 text-wrap text-left p-0 hover:bg-transparent hover:text-white select-text hover:cursor-text"
+                  >
+                    <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
+                    <p>Ajuste a tu medida</p>
+                  </Button>
                 </div>
               </div>
             </CardContent>
