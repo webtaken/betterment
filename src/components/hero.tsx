@@ -6,8 +6,7 @@ export function Hero() {
   return (
     <div className="overflow-hidden">
       <div className="grid grid-cols-12 bg-low-white">
-        <section className="relative col-span-12 md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-12 2xl:col-start-1 2xl:col-span-12 flex bg-low-white w-full sm:w-[80%]  justify-center mx-auto mb-8 sm:h-[25vh] min-[740px]:h-[30vh] min-[840px]:h-[35vh] min-[940px]:h-[40vh] min-[1040px]:h-[40vh] min-[1140px]:h-[40vh] min-[1240px]:h-[45vh] min-[1340px]:h-[50vh] min-[1440px]:h-[55vh] min-[1540px]:h-[60vh]">
-          {/* <section className="relative col-span-12 md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-12 2xl:col-start-1 2xl:col-span-12 flex bg-low-white w-full sm:w-[80%]  justify-center mx-auto mb-8 h-svh sm:h-[350px] min-[880px]:h-[450px] min-[1220px]:h-[500px] min-[1420px]:h-[550px] min-[1540px]:h-[600px]"> */}
+        <section className="relative col-span-12 md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-12 2xl:col-start-1 2xl:col-span-12 flex bg-low-white w-full sm:w-[80%]  justify-center mx-auto mb-8 sm:h-[350px] min-[880px]:h-[450px] min-[1220px]:h-[500px] min-[1420px]:h-[550px] min-[1540px]:h-[600px]">
           <div className="flex flex-col w-full sm:my-auto z-40">
             <Image
               src="/girl_mobile.png"
