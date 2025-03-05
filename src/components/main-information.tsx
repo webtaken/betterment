@@ -742,7 +742,9 @@ export async function MainInformation() {
         </Card>
         <Card className="bg-secondary text-white w-[300px] sm:w-[350px] mx-auto rounded-3xl">
           <CardHeader className="pb-1">
-            <CardTitle className="text-center">Termoterapia</CardTitle>
+            <CardTitle className="text-center font-bold">
+              Termoterapia
+            </CardTitle>
           </CardHeader>
           <CardContent className="-space-y-1 mt-0">
             <Button className={buttonClass} variant="ghost">
