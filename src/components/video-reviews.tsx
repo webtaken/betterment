@@ -18,13 +18,13 @@ import Image from "next/image";
 
 const videos = [
   {
-    url: "https://www.youtube.com/embed/_5UeWb-_XeU",
+    url: "https://www.youtube.com/embed/FiTqrbqN0mQ",
     thumbnail: "/renata-vargas.png",
     name: "Renata Vargas",
     instagram: "@revargasss",
   },
   {
-    url: "https://www.youtube.com/embed/FiTqrbqN0mQ",
+    url: "https://www.youtube.com/embed/_5UeWb-_XeU",
     thumbnail: "/angela-kubota.png",
     name: "Angela Kubota",
     instagram: "@angelakubotazb",

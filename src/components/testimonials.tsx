@@ -44,7 +44,7 @@ export async function Testimonials() {
           </ScrollArea>
         </div>
         <p className="text-center text-white text-2xl md:text-3xl mt-12 mb-8 px-4">
-          Nuestras clientas{" "}
+          Nuestras clientas <br className="sm:hidden" />
           <span className="font-bold italic">migraña free</span>
         </p>
         <VideoReviews />

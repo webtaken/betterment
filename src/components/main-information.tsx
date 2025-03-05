@@ -245,12 +245,6 @@ async function GorritoPrice() {
                 </div>
               </CardContent>
               <CardFooter className="flex flex-col min-[1200px]:flex-row gap-y-2 justify-between min-[900px]:justify-center items-center">
-                <div className="min-[900px]:hidden">
-                  <div className="flex items-center gap-x-2 text-primary">
-                    <p className="line-through">S/. 99.90</p>
-                    <p className="font-bold">S/. 79.90</p>
-                  </div>
-                </div>
                 <div className="flex justify-center">
                   <AddToCart />
                 </div>
@@ -393,39 +387,24 @@ async function AccesorioPrice() {
               </CardTitle>
             </CardHeader>
             <CardContent className="text-white">
-              <div className="flex flex-col gap-2 text-sm sm:text-base pl-4 md:pl-10 lg:pl-4">
+              <div className="flex flex-col gap-2 text-sm">
                 <div className="flex items-center gap-x-2">
-                  <Button
-                    variant="ghost"
-                    className="flex items-center gap-x-2 text-wrap text-left p-0 hover:bg-transparent hover:text-white select-text hover:cursor-text"
-                  >
-                    <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
-                    <p>Alivia cólicos menstruales</p>
-                  </Button>
+                  <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
+                  <p>Alivia cólicos menstruales</p>
                 </div>
                 <div className="flex items-center gap-x-2">
-                  <Button
-                    variant="ghost"
-                    className="flex items-center gap-x-2 text-wrap text-left p-0 hover:bg-transparent hover:text-white select-text hover:cursor-text"
-                  >
-                    <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
-                    <p>Ideal para dolor abdominal y lumbar</p>
-                  </Button>
+                  <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
+                  <p>Ideal para dolor abdominal y lumbar</p>
                 </div>
                 <div className="flex items-center gap-x-2">
-                  <Button
-                    variant="ghost"
-                    className="flex items-center gap-x-2 text-wrap text-left p-0 hover:bg-transparent hover:text-white select-text hover:cursor-text"
-                  >
-                    <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
-                    <p>Ajuste a tu medida</p>
-                  </Button>
+                  <CheckCircle2 className="size-5 fill-[#c8e9eb] stroke-low-primary" />
+                  <p>Ajuste a tu medida</p>
                 </div>
               </div>
             </CardContent>
             <CardFooter className="flex flex-col sm:flex-row justify-center gap-4 items-center">
               <CustomHeroVideoDialog videoSrc="https://www.youtube.com/embed/QMSThlB9pFI">
-                <Button className="text-white text-xs sm:text-base md:text-lg font-semibold rounded-full px-4">
+                <Button className="text-white text-lg font-semibold rounded-full px-4">
                   Ver vídeo
                 </Button>
               </CustomHeroVideoDialog>
