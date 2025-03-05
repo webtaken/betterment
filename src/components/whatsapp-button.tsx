@@ -16,7 +16,7 @@ export function WhatsappButton() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
-            className="hover:cursor-pointer bg-[#25D366] hover:bg-[#25D366] fixed bottom-8 right-8 rounded-full z-50 p-[0.620rem]"
+            className="hover:cursor-pointer bg-[#25D366] hover:bg-[#25D366] fixed bottom-4 right-4 md:bottom-8 md:right-8 rounded-full z-50 p-[0.620rem]"
             size="icon"
             asChild
             onClick={() => {
