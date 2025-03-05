@@ -76,6 +76,9 @@ function ManWithGorrito() {
             en el Perú
           </p>
           <div className="my-6 space-y-2 text-left mx-12 sm:mx-auto sm:px-8 md:mx-0 md:px-0">
+            {/* <div className="grid grid-cols-2 gap-x-3 gap-y-2">
+            
+          </div> */}
             <div className="grid grid-cols-2 gap-x-3 gap-y-2">
               <div className="flex items-center gap-x-2.5">
                 <Rotate3D className={iconBulletPointClass} />
@@ -91,14 +94,14 @@ function ManWithGorrito() {
                   </p>
                 </Button>
               </div>
-              <div className="flex items-center gap-x-2.5">
-                <X className={iconBulletPointClass} />
+              <div className="flex items-center gap-x-2 md:gap-x-3.5">
+                <X className={iconBulletPointClass + "md:p-1"} />
                 <Button className={bulletPointsClass} variant="ghost">
                   <p className="text-white">No tóxico y sin olor</p>
                 </Button>
               </div>
-              <div className="flex items-center gap-x-2.5">
-                <Cloudy className={iconBulletPointClass} />
+              <div className="flex items-center gap-x-2 md:gap-x-3.5">
+                <Cloudy className={iconBulletPointClass + "md:p-1"} />
                 <Button className={bulletPointsClass} variant="ghost">
                   <p className="text-white">No condensa</p>{" "}
                 </Button>
