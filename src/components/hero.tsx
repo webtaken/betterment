@@ -22,7 +22,7 @@ export function Hero() {
               <p className="text-[#5fb9d1] text-center sm:text-left font-bold">
                 Anti-Migrañas
               </p>
-              <p className="text-[#545454] text-xs min-[500px]:text-sm sm:text-xs md:text-sm lg:text-base my-6 px-14 sm:px-0 sm:pr-4">
+              <p className="text-[#545454] text-center min-[500px]:text-left text-xs min-[500px]:text-sm sm:text-xs md:text-sm lg:text-base my-6 px-14 sm:px-0 sm:pr-4">
                 Diseñado especialmente para aliviar las consecuencias del estrés{" "}
                 <br className="hidden sm:block" />
                 en tu cuerpo, con la innovadora terapia de frío y calor:{" "}

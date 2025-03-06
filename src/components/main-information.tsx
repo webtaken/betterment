@@ -41,7 +41,7 @@ function ManWithGorrito() {
   return (
     <section className="bg-primary">
       <div className="bg-[#5fb9d1] cursor relative cursor z-50">
-        <p className="text-center text-white italic text-2xl py-3 font-semibold">
+        <p className="text-center text-white italic text-xl sm:text-2xl py-3 font-semibold">
           Respaldado por la ciencia
         </p>
       </div>
