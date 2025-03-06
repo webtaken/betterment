@@ -90,7 +90,7 @@ export function VideoReviews() {
                 className="px-2"
               >
                 <div className="flex flex-col gap-2">
-                  <div className="bg-low-white p-1.5 rounded-full mx-auto">
+                  <div className="bg-low-white p-3 sm:p-1.5 rounded-full mx-auto">
                     <Image
                       src={video.thumbnail}
                       className="object-cover mx-auto rounded-full"
