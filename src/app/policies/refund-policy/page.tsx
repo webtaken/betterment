@@ -16,13 +16,14 @@ export default function Page() {
         transparente y justa:
         <br />
         <br />
-        Devoluciones por Daños durante el Envío:
+        <strong>Devoluciones por Daños durante el Envío:</strong>
         <br />
         <br />
         Si tus productos llegan dañados, aceptamos devoluciones y ofrecemos
         reembolsos completos. Contáctanos a través de
         contacto@bettermentperu.com y te proporcionaremos las instrucciones
         necesarias.
+        <br />
         <br />
         <strong>Otras Razones para Cambios o Reembolsos:</strong>
         <br />
