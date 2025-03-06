@@ -13,7 +13,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Betterment Perú",
-  description: "Gorrito Antimigrañas",
+  description:
+    "Productos para aliviar el estrés e impulsar tu bienestar al natural. Migrañas, dolores crónicos, cólicos menstruales y malestar muscular",
 };
 
 export default function RootLayout({
