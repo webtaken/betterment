@@ -12,8 +12,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Betterment",
-  description: "Antimigrañas",
+  title: "Betterment Perú",
+  description: "Gorrito Antimigrañas",
 };
 
 export default function RootLayout({

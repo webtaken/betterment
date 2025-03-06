@@ -4,7 +4,7 @@ export default function Page() {
       <h1 className="text-4xl font-bold">Información de contacto</h1>
       <br />
       <p>
-        Información de Contacto de Betterment Perú
+        <strong>Información de Contacto de Betterment Perú</strong>
         <br />
         <br />
         ¡Nos encantaría saber de ti! Para cualquier pregunta, comentario o
@@ -12,10 +12,10 @@ export default function Page() {
         información de contacto:
         <br />
         <br />
-        Correo Electrónico: contacto@bettermentperu.com
+        <strong>Correo Electrónico: contacto@bettermentperu.com</strong>
         <br />
         <br />
-        Para comunicacion mas directa, puedes escribirnos a travez de nuestras
+        Para comunicación mas directa, puedes escribirnos a travez de nuestras
         redes sociales
         <br />
         <br />
