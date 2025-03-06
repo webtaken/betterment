@@ -87,7 +87,7 @@ export function VideoReviews() {
               <CustomHeroVideoDialogMobile
                 key={video.url}
                 videoSrc={video.url}
-                className="px-2"
+                className="px-2 size-[80%] mx-auto sm:size-full"
               >
                 <div className="flex flex-col gap-2">
                   <div className="bg-low-white p-3 sm:p-1.5 rounded-full mx-auto">
@@ -108,11 +108,11 @@ export function VideoReviews() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="sm:hidden absolute -left-8 z-10" />
+        <CarouselPrevious className="sm:hidden absolute -left-3 z-10" />
         <div className="hidden sm:block">
           <CarouselPrevious />
         </div>
-        <CarouselNext className="sm:hidden absolute -right-8 z-10" />
+        <CarouselNext className="sm:hidden absolute -right-3 z-10" />
         <div className="hidden sm:block">
           <CarouselNext />
         </div>
