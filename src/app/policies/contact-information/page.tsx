@@ -12,7 +12,9 @@ export default function Page() {
         información de contacto:
         <br />
         <br />
-        <strong>Correo Electrónico: contacto@bettermentperu.com</strong>
+        <span className="font-bold">
+          Correo Electrónico: contacto@bettermentperu.com
+        </span>
         <br />
         <br />
         Para comunicación mas directa, puedes escribirnos a travez de nuestras
