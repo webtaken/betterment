@@ -343,7 +343,7 @@ async function GorritoPrice() {
                 <AccordionContent className="text-xs">
                   Todos los envíos se realizan al día siguiente o hasta 48 horas
                   después. Si es a provincia, se dejará en engancha en este
-                  rango.
+                  rango.{" "}
                   <span className="font-bold">
                     Nosotros te contactaremos minutos después de tu compra para
                     coordinar contigo el envío
