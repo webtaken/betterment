@@ -8,7 +8,9 @@ export default function Page() {
           Política de Privacidad de Betterment Perú
         </span>
         <br />
+        <br />
         Mes de entrada en vigencia: Diciembre, 2023.
+        <br />
         <br />
         En Betterment Perú, valoramos tu privacidad y nos comprometemos a
         proteger la información personal que nos brindas. Esta Política de
