@@ -1,3 +1,9 @@
+# Betterment - El Gorrito Antimigrañas
+
+Este proyecto es un sitio web para presentar el producto "Gorrito Antimigrañas", una solución innovadora diseñada para aliviar el estrés y reducir los síntomas de migraña. Nuestro producto ofrece una alternativa natural y efectiva para mejorar el bienestar y la calidad de vida de quienes sufren de dolores de cabeza frecuentes.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
